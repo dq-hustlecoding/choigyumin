@@ -74,6 +74,7 @@ export const projects: Project[] = [
       Stack.reactnative,
       Stack.postgres,
     ],
+    dimensions: [360, 640],
     screenshots: ['https://i.ibb.co/5WjgwZC/2022-07-19-7-44-35.png'],
     deployment: {
       web: 'https://class101.net/',
