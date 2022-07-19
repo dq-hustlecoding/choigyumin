@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: 'Momenti, Inc',
     slug: 'momenti',
-    banner: 'https://i.ibb.co/7K1nhKr/2022-07-19-7-57-07.png',
+    banner: '/static/projects/momenti/momenti.png',
     website: 'https://momenti.tv',
     description:
       'New Interactive media platform, user interaction data processing and ML/DL serving',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       Stack.gcp,
     ],
     dimensions: [360, 640],
-    screenshots: ['https://i.ibb.co/7K1nhKr/2022-07-19-7-57-07.png'],
+    screenshots: ['/static/projects/momenti/momenti.png'],
     deployment: {
       web: 'https://momenti.tv',
     },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     title: 'Class101',
     slug: 'class101',
-    banner: 'https://i.ibb.co/5WjgwZC/2022-07-19-7-44-35.png',
+    banner: '/static/projects/class101/class101.png',
     website: 'https://class101.net/',
     description: `New way of life changing learning, Creative/Money/Craft/Tech lectures`,
     shortDescription: 'Building data team and data infrastructure',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
       Stack.postgres,
     ],
     dimensions: [360, 640],
-    screenshots: ['https://i.ibb.co/5WjgwZC/2022-07-19-7-44-35.png'],
+    screenshots: ['/static/projects/class101/class101.png'],
     deployment: {
       web: 'https://class101.net/',
     },
