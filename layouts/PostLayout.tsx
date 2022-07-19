@@ -55,6 +55,8 @@ export default function PostLayout({
     images,
   } = frontMatter;
 
+  const { name, avatar, occupation, company, resume } = authorDetails[0];
+
   const banner = images?.[0];
 
   const url = `${siteMetadata.siteUrl}/blog/${slug}`;
@@ -104,10 +106,10 @@ export default function PostLayout({
                     >
                       {author.avatar && (
                         <Image
-                          src={author.avatar}
-                          width='192px'
-                          height='307px'
-                          className='h-48 w-48 rounded-full'
+                          src={avatar}
+                          width='38px'
+                          height='60px'
+                          className='h-10 w-10 rounded-full'
                           alt='avatar'
                         />
                       )}
