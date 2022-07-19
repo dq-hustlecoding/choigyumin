@@ -17,7 +17,7 @@ export interface Contact {
 export const contact: Contact = {
   twitter: '@dq_hustlecoding',
   site: 'choigyumin.pages.dev',
-  calendly: 'https://calendly.com/dq',
+  calendly: 'https://calendly.com/choigyumin/30-coffee-chat-with-dq-gyumin',
   links: {
     github: 'https://github.com/dq-hustlecoding',
     linkedin: 'https://linkedin.com/in/gyuminchoi',
