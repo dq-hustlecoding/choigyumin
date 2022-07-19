@@ -32,8 +32,13 @@ function Contact(): React.ReactElement {
         <Header title='Contact' />
         <div className='container py-12'>
           <p>
-            Do you have a project in mind? Want to hire me? or simply wanna
-            chat? Feel free to
+            Do you have a project in mind?
+            <br />
+            Are you running early stage start-up and need technical advice?
+            <br />
+            or simply wanna chat?
+            <br />
+            Feel free to
             <span
               className='ml-2 cursor-pointer !font-normal !text-black !no-underline dark:!text-white'
               onClick={onScheduleMeeting}
