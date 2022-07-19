@@ -22,7 +22,7 @@ export const contact: Contact = {
     github: 'https://github.com/dq-hustlecoding',
     linkedin: 'https://linkedin.com/in/gyuminchoi',
     twitter: 'https://twitter.com/dq_hustlecoding',
-    youtube: 'https://www.youtube.com/c/hustlecoding',
+    youtube: 'https://www.youtube.com/channel/UCykRnF6NN1Jqj9yEbtUPuvA',
     email: 'mailto:dq.data.world@gmail.com',
     buymeacoffee: 'https://www.buymeacoffee.com/hustlecoding',
   },
