@@ -63,6 +63,8 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ['firebasestorage.googleapis.com'],
+    loader: 'akamai',
+    path: '',
   },
   async headers() {
     return [
