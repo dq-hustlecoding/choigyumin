@@ -57,7 +57,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
                   strokeWidth={2}
                   color={resumeColor}
                 >
-                  Resume
+                  Resume (Contact needed)
                 </RoughNotation>
               </a>
               <h2 className='mt-8 mb-4 text-2xl font-semibold dark:text-white'>
