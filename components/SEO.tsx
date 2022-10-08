@@ -1,6 +1,6 @@
+import siteMetadata from '@/data/siteMetadata';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import siteMetadata from '@/data/siteMetadata';
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter';
 import { PostFrontMatter } from 'types/PostFrontMatter';
 
@@ -206,6 +206,11 @@ export const BlogSEO = ({
             __html: JSON.stringify(structuredData, null, 2),
           }}
         />
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3440557049498956'
+          crossOrigin='anonymous'
+        ></script>
       </Head>
     </>
   );
