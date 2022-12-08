@@ -16,3 +16,10 @@ A software engineer who loves early stage start-up, strongly believes in technol
 Presently, I am working as a Data Engineer at [Momenti](https://momenti.tv) where I am helping to build a new media platform while gain insights from tremendous interaction data.
 
 Also I've helped early stage start-ups like [Baroga](https://www.바로가.com), [Meliora Partners](https://meliorapartners.com) as a technical consultant.
+
+Writer of coding guide book for beginners
+< 나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택 >
+[예스24](http://www.yes24.com/Product/Goods/116009699)
+[교보문고](https://product.kyobobook.co.kr/detail/S000200398450)
+[알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306366957)
+[영풍문고](https://www.ypbooks.co.kr/m_detail_view.yp?code=101208352)
