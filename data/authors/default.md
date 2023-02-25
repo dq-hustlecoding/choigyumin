@@ -19,10 +19,13 @@ Also I've helped early stage start-ups like [Baroga](https://www.바로가.com),
 
 
 Author of coding guide book for beginners
+
 English: < Build Your Own Netflix with Python and React: A Full Stack Guide to Movie Recommendation Systems: Create a Professional Portfolio using GitHub, FastAPI(python), React(Javascript) >
+
 [Amazon](https://a.co/d/crhmMBu) 
 
 Korean: < 나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택 >
+
 [예스24](http://www.yes24.com/Product/Goods/116009699)
 [교보문고](https://product.kyobobook.co.kr/detail/S000200398450)
 [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306366957)
