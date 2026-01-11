@@ -4,7 +4,6 @@ shortname: DQ
 avatar: /static/dq.png
 occupation: Solution Engineer @ Snowflake
 company: Snowflake
-resume: https://www.linkedin.com/in/gyuminchoi
 email: dq.data.world@gmail.com
 twitter: https://twitter.com/dq_hustlecoding
 linkedin: https://www.linkedin.com/in/gyuminchoi

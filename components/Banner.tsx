@@ -1,7 +1,5 @@
 import Link from '@/components/Link';
-import { useRandomColorPair } from '@/lib/hooks/useRandomColorPair';
 import { memo } from 'react';
-import { RoughNotation } from 'react-rough-notation';
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter';
 
 interface BannerProps {
@@ -10,7 +8,6 @@ interface BannerProps {
 
 function Banner(props: BannerProps): React.ReactElement {
   const { frontMatter } = props;
-  const [aboutColor, contactColor] = useRandomColorPair();
 
   return (
     <div className='fade-in banner flex flex-1 flex-col justify-center px-6 py-12 dark:text-white lg:px-10 lg:py-16'>
@@ -20,7 +17,7 @@ function Banner(props: BannerProps): React.ReactElement {
       </p>
       
       {/* Name */}
-      <h1 className='text-4xl font-bold leading-tight dark:text-white lg:text-6xl'>
+      <h1 className='text-4xl font-bold leading-tight text-gray-900 dark:text-white lg:text-6xl'>
         Hi, I&apos;m {frontMatter.shortname}
       </h1>
       
@@ -44,30 +41,14 @@ function Banner(props: BannerProps): React.ReactElement {
           className='inline-flex items-center rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-500' 
           href='/about'
         >
-          <RoughNotation
-            show
-            type='highlight'
-            animationDelay={250}
-            animationDuration={2000}
-            color={aboutColor}
-          >
-            About Me
-          </RoughNotation>
+          About Me
         </Link>
         
         <Link 
-          className='inline-flex items-center rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700' 
+          className='inline-flex items-center rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700' 
           href='/contact'
         >
-          <RoughNotation
-            show
-            type='highlight'
-            animationDelay={500}
-            animationDuration={2000}
-            color={contactColor}
-          >
-            Let&apos;s Talk
-          </RoughNotation>
+          Let&apos;s Talk
         </Link>
         
         <a 
@@ -83,7 +64,7 @@ function Banner(props: BannerProps): React.ReactElement {
       {/* Stats/Highlights */}
       <div className='mt-10 flex flex-wrap gap-8 border-t border-gray-200 pt-8 dark:border-gray-700'>
         <div>
-          <p className='text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl'>5+</p>
+          <p className='text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl'>10+</p>
           <p className='text-sm text-gray-500 dark:text-gray-400'>Years Experience</p>
         </div>
         <div>
@@ -92,7 +73,7 @@ function Banner(props: BannerProps): React.ReactElement {
         </div>
         <div>
           <p className='text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl'>SNU</p>
-          <p className='text-sm text-gray-500 dark:text-gray-400'>Stats & CS</p>
+          <p className='text-sm text-gray-500 dark:text-gray-400'>Stats &amp; CS</p>
         </div>
         <div>
           <p className='text-2xl font-bold text-primary-500 dark:text-primary-400 lg:text-3xl'>❄️</p>
