@@ -72,7 +72,7 @@ export default function Tags({
           <p className='mt-4 text-gray-600 dark:text-gray-400'>
             These tags represent the main areas I write about. From practical programming tutorials 
             and best practices to insights about startup life and career development in tech. 
-            Each tag groups related posts to help you find exactly what you're looking for.
+            Each tag groups related posts to help you find exactly what you&apos;re looking for.
           </p>
           <div className='mt-6'>
             <Link

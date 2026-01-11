@@ -120,7 +120,7 @@ export default function Home({
               Featured Projects
             </h2>
             <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-              Some things I've built and contributed to.
+              Some things I&apos;ve built and contributed to.
             </p>
           </div>
           <div className='container py-6'>
