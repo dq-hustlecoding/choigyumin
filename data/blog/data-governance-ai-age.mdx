@@ -1,0 +1,224 @@
+---
+title: 'Data Governance in the Age of AI: What Changes and What Stays the Same'
+date: '2025-12-05'
+tags: ['governance', 'ai', 'data-strategy', 'security']
+draft: false
+summary: 'As AI transforms how we use data, governance must evolve - but the fundamentals remain critical'
+authors: ['default']
+---
+
+With the explosion of AI and LLMs, I am getting more questions about data governance than ever before. Organizations are excited about AI capabilities but worried about the risks. How do you enable innovation while maintaining control?
+
+## The New Challenges
+
+AI introduces governance challenges that traditional data management did not anticipate:
+
+### 1. Training Data Provenance
+
+When you train an ML model, you need to know:
+- Where did this data come from?
+- Did we have the right to use it?
+- What biases might be embedded?
+- Can we explain decisions to regulators?
+
+This is not just about compliance - it is about trust. A model trained on problematic data will produce problematic outputs.
+
+### 2. Model as Data
+
+ML models are a new form of data asset:
+- They contain encoded information from training data
+- They can leak sensitive information through outputs
+- They have versioning and lineage requirements
+- They need access controls just like data
+
+Most governance frameworks do not account for models. This needs to change.
+
+### 3. Prompt Data and Context
+
+With LLMs, every prompt potentially includes sensitive data:
+- Customer information in questions
+- Proprietary data in context windows
+- Trade secrets in few-shot examples
+
+Where does this data go? Who has access? How long is it retained?
+
+### 4. Generated Content
+
+AI outputs create new governance questions:
+- Who owns generated content?
+- How do we track what was AI-generated?
+- What are the audit requirements?
+- How do we handle hallucinations in regulated industries?
+
+## What Stays the Same
+
+Despite these new challenges, the fundamentals of good governance remain:
+
+### Clear Ownership
+
+Every data asset needs an owner who is accountable for:
+- Data quality
+- Access decisions
+- Lifecycle management
+- Compliance
+
+This applies to ML models just as much as to tables in a database.
+
+### Classification and Sensitivity
+
+You need to know what data you have and how sensitive it is:
+- PII / PHI / PCI requirements do not change with AI
+- Actually, they become more important as data is used more broadly
+- Classification should be automated where possible
+
+### Access Control
+
+The principle of least privilege still applies:
+- Who needs access to training data?
+- Who can deploy models to production?
+- Who can see model outputs?
+
+Role-based access control works, but needs to be extended for AI workflows.
+
+### Audit and Lineage
+
+You need to answer:
+- What data was used to train this model?
+- What version of the model produced this output?
+- Who accessed what, when?
+
+This is table stakes for regulated industries.
+
+## A Modern Governance Framework for AI
+
+Here is how I recommend enterprises approach AI governance:
+
+### Layer 1: Data Foundation
+
+Before doing any AI, ensure your data governance basics are solid:
+
+```
+┌─────────────────────────────────────────────┐
+│           DATA CATALOG                       │
+│  - Inventory all data assets                │
+│  - Classification (sensitivity, PII, etc.)  │
+│  - Ownership and stewardship                │
+│  - Lineage tracking                         │
+└─────────────────────────────────────────────┘
+```
+
+If you cannot govern your data, you cannot govern AI built on that data.
+
+### Layer 2: AI-Specific Policies
+
+Extend your governance for AI use cases:
+
+**Model Development**
+- Approved data sources for training
+- Required documentation (model cards)
+- Bias testing requirements
+- Review and approval workflows
+
+**Model Deployment**
+- Production readiness criteria
+- Monitoring requirements
+- Rollback procedures
+- Performance thresholds
+
+**LLM Usage**
+- Approved use cases
+- Data that can/cannot be included in prompts
+- Vendor requirements (where is data processed?)
+- Human review requirements
+
+### Layer 3: Technical Controls
+
+Policies are only useful if enforced:
+
+**Access Management**
+- Fine-grained permissions for data and models
+- Just-in-time access for sensitive operations
+- Automated access reviews
+
+**Data Protection**
+- Masking and tokenization
+- Differential privacy for training
+- Secure enclaves for sensitive workloads
+
+**Monitoring and Audit**
+- All access logged
+- Anomaly detection
+- Regular compliance reports
+
+### Layer 4: Organizational Alignment
+
+Governance is not just a technical problem:
+
+**Roles and Responsibilities**
+- Data stewards for each domain
+- AI ethics committee or review board
+- Clear escalation paths
+
+**Training and Awareness**
+- Everyone using AI should understand the policies
+- Regular updates as AI capabilities evolve
+- Incident response procedures
+
+**Culture**
+- Governance as enabler, not blocker
+- Celebrate compliance, not just innovation
+- Psychological safety for raising concerns
+
+## Practical Implementation
+
+### Start with High-Risk Use Cases
+
+You cannot govern everything at once. Prioritize:
+1. Customer-facing AI applications
+2. Decision-making systems (lending, hiring, etc.)
+3. Regulated industries (healthcare, finance)
+4. Sensitive data processing
+
+### Automate What You Can
+
+Manual governance does not scale:
+- Automated data classification
+- Policy-as-code for access control
+- Continuous compliance monitoring
+- Automated lineage tracking
+
+### Build Governance into the Workflow
+
+Governance should not be a separate step:
+- Data scientists see classification when accessing data
+- Model deployment requires documented provenance
+- Prompts are automatically scanned for sensitive data
+
+If governance is friction, people will route around it.
+
+## The Opportunity
+
+Here is the positive spin: organizations that get AI governance right will have a competitive advantage.
+
+They will be able to:
+- Move faster because they have trust in their systems
+- Enter regulated markets with confidence
+- Build customer trust in AI-powered products
+- Avoid costly incidents and regulatory penalties
+
+Governance is not the enemy of innovation. It is the foundation for sustainable innovation.
+
+## Conclusion
+
+AI does not change the fundamentals of data governance - it amplifies their importance. The organizations that succeed with AI will be those that:
+
+1. Have their data foundation in order
+2. Extend governance frameworks for AI-specific challenges
+3. Implement technical controls that scale
+4. Build a culture of responsible AI use
+
+If you are working on AI governance challenges, I would love to hear what is working (and not working) for your organization. [Let us connect](https://calendar.app.google/kChErD82BFsh7AJo8) and share learnings.
+
+---
+
+*This post is part of my series on enterprise AI transformation. See also: [Enterprise AI Transformation: Beyond the Hype](/blog/ai-transformation-enterprise)*

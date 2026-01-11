@@ -1,0 +1,160 @@
+---
+title: 'The Modern Data Stack in 2024: What Actually Matters'
+date: '2024-06-19'
+tags: ['data-engineering', 'architecture', 'cloud']
+draft: false
+summary: 'Cutting through the hype to focus on what actually matters when building a modern data platform'
+authors: ['default']
+---
+
+The term "Modern Data Stack" has been thrown around so much that it has almost lost meaning. Everyone has opinions. Vendors push their solutions. But what actually matters when you are building a data platform in 2024?
+
+After years of building data infrastructure across different companies and scales, here is my pragmatic take.
+
+## What the Modern Data Stack Actually Is
+
+At its core, the modern data stack is about:
+
+1. **Cloud-native**: Managed services over self-hosted
+2. **Modular**: Best-of-breed tools over monolithic platforms
+3. **SQL-centric**: Transformations in SQL, not custom code
+4. **Version-controlled**: Data pipelines as code
+
+That is it. Everything else is implementation details.
+
+## The Core Components
+
+### 1. Data Warehouse / Lakehouse
+
+**The big three:**
+- Snowflake
+- Databricks
+- BigQuery
+
+**How to choose:**
+- Already on GCP? BigQuery is the path of least resistance
+- Need advanced ML capabilities? Databricks shines
+- Want the best balance of features and ease of use? Snowflake
+
+**Hot take:** The differences matter less than people think. Pick one and focus on building, not debating.
+
+### 2. Data Integration (ELT)
+
+**Popular options:**
+- Fivetran (premium, polished)
+- Airbyte (open-source, flexible)
+- Stitch (budget-friendly)
+
+**Key criteria:**
+- Do they support your sources?
+- What is their reliability track record?
+- How do they handle schema changes?
+
+### 3. Transformation (dbt)
+
+dbt has effectively won this category. The question is not whether to use dbt, but how:
+
+- **dbt Core**: Free, self-managed
+- **dbt Cloud**: Managed, better collaboration features
+
+For teams smaller than 10 data people, dbt Core is usually sufficient.
+
+### 4. Orchestration
+
+**Options:**
+- Airflow (battle-tested, complex)
+- Dagster (modern, opinionated)
+- Prefect (Python-native, flexible)
+- dbt Cloud (if dbt is your primary workload)
+
+**My recommendation:** Start with dbt Cloud or Dagster. Airflow is powerful but has significant operational overhead.
+
+### 5. BI / Visualization
+
+**The landscape:**
+- Looker (powerful, steep learning curve)
+- Metabase (simple, open-source)
+- Mode (SQL-friendly, good for analysts)
+- Preset (managed Superset)
+
+**Controversial opinion:** Most companies over-invest in BI tooling. Start with something simple (Metabase) and upgrade when you have a clear need.
+
+## What Actually Matters
+
+### 1. Data Quality
+
+The fanciest tools mean nothing if your data is wrong. Invest in:
+
+- **Testing**: dbt tests, Great Expectations, or similar
+- **Monitoring**: Anomaly detection on key metrics
+- **Documentation**: What does this table mean? Who owns it?
+
+### 2. Governance
+
+As your data grows, you need to answer:
+
+- Who can access what data?
+- Where did this number come from?
+- Is this PII? How should we handle it?
+
+This is not sexy work, but it is essential.
+
+### 3. Cost Management
+
+Cloud data platforms can get expensive fast. Key practices:
+
+- **Monitor usage**: Know where your compute goes
+- **Optimize queries**: Bad SQL can be 100x more expensive
+- **Right-size warehouses**: Auto-scaling is not magic
+- **Archive cold data**: Not everything needs to be in hot storage
+
+### 4. Developer Experience
+
+The best architecture is one that people actually use. Optimize for:
+
+- Fast feedback loops
+- Clear documentation
+- Easy onboarding
+- Self-service where possible
+
+## What Does Not Matter (As Much As Vendors Claim)
+
+### Real-Time Everything
+
+Most businesses do not need sub-second latency. Batch processing with hourly or daily refreshes is fine for 90% of use cases. Build real-time when you have a real-time problem.
+
+### AI/ML Integration
+
+Yes, AI is important. No, you do not need every feature your data warehouse vendor is pushing. Start with the basics (clean data, good models) before worrying about "AI-native" platforms.
+
+### The Latest Shiny Tool
+
+There is always a new tool promising to revolutionize your data stack. Most will not survive 5 years. Stick with proven technologies unless you have a compelling reason to experiment.
+
+## My Recommended Stack for 2024
+
+For a startup or mid-size company:
+
+| Component | Recommendation |
+|-----------|----------------|
+| Warehouse | Snowflake or BigQuery |
+| Integration | Airbyte or Fivetran |
+| Transformation | dbt Core + CI/CD |
+| Orchestration | Dagster or dbt Cloud |
+| BI | Metabase to start |
+| Quality | dbt tests + custom monitoring |
+
+Total cost: $500-2000/month for most startups
+
+## Final Thoughts
+
+The modern data stack is not about having the most tools or the newest technologies. It is about building a data platform that:
+
+1. Delivers reliable, trustworthy data
+2. Enables your team to move fast
+3. Scales with your business
+4. Does not break the bank
+
+Focus on these outcomes, not on checking boxes on a vendor feature list.
+
+What does your data stack look like? I am always curious to hear what is working (and not working) for other teams.

@@ -1,0 +1,144 @@
+---
+title: 'Building Data Pipelines at Scale: Lessons from NYC'
+date: '2023-03-15'
+tags: ['data-engineering', 'bigquery', 'gcp', 'pipeline']
+draft: false
+summary: 'Key lessons learned building production data pipelines at a NYC-based startup, from schema design to real-time processing'
+authors: ['default']
+---
+
+After spending nearly two years building data infrastructure at a NYC-based media startup, I wanted to share some hard-earned lessons about building data pipelines that actually scale.
+
+## The Challenge
+
+When I joined, the data infrastructure was essentially non-existent. We needed to:
+
+1. Capture millions of user interaction events daily
+2. Process them in near real-time for ML models
+3. Build a data mart layer for business analytics
+4. Keep costs manageable on a startup budget
+
+## Architecture Decisions
+
+### Choosing BigQuery over Alternatives
+
+We evaluated several options including Snowflake, Redshift, and BigQuery. For our use case, BigQuery won because:
+
+- **Serverless**: No cluster management overhead
+- **Cost model**: Pay-per-query worked well for our bursty workloads
+- **GCP Integration**: We were already on GCP for Cloud Run
+
+### Event Schema Design
+
+One of the most critical early decisions was the event schema. We adopted a semi-structured approach:
+
+```json
+{
+  "event_id": "uuid",
+  "event_type": "video_watch",
+  "user_id": "uuid",
+  "timestamp": "2023-03-15T10:30:00Z",
+  "properties": {
+    "video_id": "abc123",
+    "watch_duration_seconds": 145,
+    "completion_rate": 0.72
+  },
+  "context": {
+    "device": "mobile",
+    "platform": "ios",
+    "app_version": "2.1.0"
+  }
+}
+```
+
+The `properties` and `context` fields are JSON columns in BigQuery, giving us flexibility without schema migrations.
+
+### The Pub/Sub + Cloud Run Pattern
+
+For ingestion, we built a log proxy server:
+
+1. Client SDKs send events to our NestJS API
+2. Events are validated and enriched
+3. Published to Google Pub/Sub
+4. Cloud Run subscribers batch-write to BigQuery
+
+This pattern gave us:
+- **Decoupling**: Ingestion speed independent of storage
+- **Buffering**: Pub/Sub handles traffic spikes
+- **Reliability**: At-least-once delivery guarantees
+
+## DBT for the Data Mart
+
+The raw event data isn't useful for business users. We used DBT to build a proper data mart:
+
+```sql
+-- models/marts/user_engagement.sql
+{{ config(materialized='incremental') }}
+
+SELECT
+  user_id,
+  DATE(timestamp) as activity_date,
+  COUNT(DISTINCT session_id) as sessions,
+  SUM(CASE WHEN event_type = 'video_watch' THEN 1 ELSE 0 END) as videos_watched,
+  AVG(properties.watch_duration_seconds) as avg_watch_duration
+FROM {{ ref('stg_events') }}
+{% if is_incremental() %}
+WHERE timestamp > (SELECT MAX(activity_date) FROM {{ this }})
+{% endif %}
+GROUP BY 1, 2
+```
+
+### Key DBT Patterns We Adopted
+
+1. **Incremental models** for large tables
+2. **Snapshots** for slowly changing dimensions
+3. **Tests** on every model (not null, unique, relationships)
+4. **Documentation** as code
+
+## Lessons Learned
+
+### 1. Start with the End in Mind
+
+Before writing any pipeline code, we mapped out:
+- What questions will stakeholders ask?
+- What metrics drive business decisions?
+- What data do ML models need?
+
+This prevented building pipelines that nobody used.
+
+### 2. Invest in Data Quality Early
+
+We added data quality checks from day one:
+- Schema validation at ingestion
+- Anomaly detection on key metrics
+- Automated alerts for data freshness
+
+The cost of bad data compounds quickly.
+
+### 3. Make It Observable
+
+Every pipeline should answer:
+- Is it running?
+- When did it last succeed?
+- How long did it take?
+- How much data did it process?
+
+We used Cloud Monitoring dashboards and PagerDuty alerts.
+
+## Results
+
+After 18 months:
+- Processing **10M+ events daily**
+- 99.9% pipeline reliability
+- Query costs reduced by 60% through optimization
+- ML team shipping models 3x faster with clean data
+
+## What I Would Do Differently
+
+1. **Adopt dbt earlier** - We spent months with ad-hoc SQL before DBT
+2. **Better CDC patterns** - Our initial approach to database replication was naive
+3. **More aggressive data retention policies** - Storage costs snuck up on us
+
+Building data infrastructure at a startup is challenging but incredibly rewarding. You get to make architectural decisions that would take years at larger companies.
+
+If you are building something similar, feel free to reach out!

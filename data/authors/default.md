@@ -2,31 +2,47 @@
 name: DQ Gyumin Choi
 shortname: DQ
 avatar: /static/dq.png
-occupation: Data Engineer
-company: Momenti, Inc
-resume: https://drive.google.com/file/d/1K4XQfBGGBg1xNvinyN9LusoUoSqkUdTo/view?usp=sharing
+occupation: Solution Engineer @ Snowflake
+company: Snowflake
+resume: https://www.linkedin.com/in/gyuminchoi
 email: dq.data.world@gmail.com
 twitter: https://twitter.com/dq_hustlecoding
 linkedin: https://www.linkedin.com/in/gyuminchoi
 github: https://github.com/dq-hustlecoding
 ---
 
-A software engineer who loves early stage start-up, strongly believes in technologies. Experienced at writing code in a high-paced environment.
+**Global Data & AI Solutions Engineer** with experience across Singapore, New York, and Seoul. Currently at [Snowflake](https://snowflake.com), helping enterprises transform their data architecture and accelerate AI initiatives.
 
-Presently, I am working as a Data Engineer at [Momenti](https://momenti.tv) where I am helping to build a new media platform while gain insights from tremendous interaction data.
+## What I Do
 
-Also I've helped early stage start-ups like [Baroga](https://www.바로가.com), [Meliora Partners](https://meliorapartners.com) as a technical consultant.
+I specialize in **Enterprise AI/ML Transformation (AX)** — helping organizations modernize their data infrastructure, optimize data pipelines, and implement scalable AI solutions. My expertise spans:
 
+- **Data Architecture & Strategy** — Multi-cloud data platforms, data mesh, and lakehouse architectures
+- **AI/ML Infrastructure** — Production ML pipelines, MLOps, and AI-ready data foundations  
+- **Cloud Data Platforms** — Snowflake, BigQuery, and modern data stack implementation
 
-Author of coding guide book for beginners
+## Looking to Collaborate?
 
-English: < Build Your Own Netflix with Python and React: A Full Stack Guide to Movie Recommendation Systems: Create a Professional Portfolio using GitHub, FastAPI(python), React(Javascript) >
+If your organization is exploring:
+- Modernizing legacy data infrastructure
+- Building enterprise-grade AI/ML platforms
+- Optimizing cloud data costs (TCO analysis)
+- Implementing data governance at scale
 
-Click to buy: [Amazon](https://a.co/d/crhmMBu) 
+Feel free to [schedule a call](https://calendar.app.google/kChErD82BFsh7AJo8) or reach out via email.
 
-Korean: < 나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택 >
+---
 
-Click to buy: [예스24](http://www.yes24.com/Product/Goods/116009699)
-[교보문고](https://product.kyobobook.co.kr/detail/S000200398450)
-[알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306366957)
-[영풍문고](https://www.ypbooks.co.kr/m_detail_view.yp?code=101208352)
+### Background
+
+**Education**: Seoul National University (Statistics & Computer Science)
+
+**Certifications**: SnowPro Core Certified
+
+### Author
+
+I wrote a coding guide book for developers looking to build full-stack applications:
+
+**English**: [Build Your Own Netflix with Python and React](https://a.co/d/crhmMBu) — A Full Stack Guide to Movie Recommendation Systems
+
+**Korean**: [나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택](http://www.yes24.com/Product/Goods/116009699)

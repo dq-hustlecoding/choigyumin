@@ -1,0 +1,127 @@
+---
+title: 'What I Learned as a Startup CTO in Singapore'
+date: '2023-07-22'
+tags: ['startup', 'leadership', 'career']
+draft: false
+summary: 'Reflections on 18 months as CTO of an early-stage startup in Singapore - the good, the bad, and what I would do differently'
+authors: ['default']
+---
+
+From late 2020 to early 2022, I served as the CTO of an early-stage startup in Singapore. It was one of the most challenging and rewarding experiences of my career. Here is what I learned.
+
+## The Context
+
+The startup was building a content recommendation platform. When I joined, we had:
+- 3 people (including me)
+- A vague product vision
+- 6 months of runway
+- Zero technical infrastructure
+
+By the time I left, we had:
+- A working product with real users
+- A recommendation engine with 85% accuracy
+- A small but effective engineering team
+- Extended runway through a seed round
+
+## Technical Decisions That Mattered
+
+### 1. Recommendation Engine Architecture
+
+Building a recommendation engine from scratch was our core technical challenge. We went with a hybrid approach:
+
+**Collaborative Filtering (LightGCN)**
+- Graph-based neural network for user-item interactions
+- Better than traditional matrix factorization for sparse data
+- Required significant GPU resources for training
+
+**Content-Based Fallback (ALS)**
+- Solved the cold-start problem for new users
+- Used item features when we lacked interaction data
+- Much cheaper to run
+
+The key insight: **you need both**. Pure collaborative filtering fails for new users, and pure content-based misses the serendipity that makes recommendations feel magical.
+
+### 2. Backend Stack Choice
+
+We chose NestJS with GraphQL. In retrospect, this was the right call:
+
+**Why NestJS:**
+- TypeScript-first with great DX
+- Modular architecture scales well
+- Excellent decorator-based patterns
+
+**Why GraphQL:**
+- Mobile clients could request exactly what they needed
+- Single endpoint simplified client development
+- Great tooling (Apollo, code generation)
+
+### 3. Infrastructure Decisions
+
+We went all-in on AWS with:
+- ECS Fargate for containers
+- RDS PostgreSQL for primary data
+- ElastiCache Redis for sessions and caching
+- S3 + CloudFront for media
+
+**What I would change:** I would seriously consider serverless-first today. Our infrastructure costs were significant for a startup, and managing containers was overhead we did not need early on.
+
+## Leadership Lessons
+
+### Hiring is Everything (and Incredibly Hard)
+
+As CTO, I spent ~40% of my time on hiring. Key lessons:
+
+1. **Culture fit matters more than skills** - You can teach technology, not values
+2. **Take-home assignments reveal more than interviews** - We learned more from a 4-hour project than 10 hours of interviews
+3. **Reference checks are underrated** - Actually call references, ask specific questions
+
+### Technical Debt is a Business Decision
+
+Every shortcut has a cost. I learned to frame technical debt in business terms:
+
+*"We can ship this feature in 2 weeks with technical debt, or 4 weeks without. The debt will cost us ~1 week per month in slowdown. When do we need this feature to hit our metrics?"*
+
+This framing got much better buy-in from non-technical co-founders.
+
+### Communication is Your Primary Job
+
+As CTO, your job is not writing code. It is:
+
+1. **Translating** business needs into technical requirements
+2. **Communicating** technical constraints to business stakeholders
+3. **Aligning** the engineering team around shared goals
+4. **Unblocking** people who are stuck
+
+I probably spent 60% of my time in meetings, 20% on architecture/code review, and 20% writing code myself.
+
+## What I Would Do Differently
+
+### 1. Hire a Senior Engineer Earlier
+
+I tried to do too much myself. Bringing in a senior engineer 3 months earlier would have been worth the runway cost.
+
+### 2. Set Up Better Processes from Day One
+
+We operated in chaos mode for too long. Simple processes like:
+- Weekly sprint planning
+- Daily standups
+- Code review requirements
+
+These are not bureaucracy. They are communication infrastructure.
+
+### 3. Take More Breaks
+
+Startup life is intense. I burned out multiple times because I did not protect my recovery time. Sustainable pace matters more than heroic sprints.
+
+## Was It Worth It?
+
+Absolutely. Being a startup CTO taught me:
+
+- How to make decisions with incomplete information
+- How to build and lead a team
+- How to balance technical idealism with business pragmatism
+- What I actually value in work
+
+Even though the startup did not become a unicorn, the experience was invaluable. If you are considering a similar role, I would encourage you to go for it - but go in with realistic expectations.
+
+The best career growth often happens in the most uncomfortable situations.
