@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: 'Snowflake Solutions',
     slug: 'snowflake',
-    banner: '/static/projects/snowflake/snowflake.png',
+    banner: '/static/projects/snowflake/logo.png',
     website: 'https://snowflake.com',
     description:
       'Enterprise AI/ML transformation and data platform modernization. Helping organizations build scalable data architectures, optimize cloud costs, and accelerate AI initiatives with Snowflake.',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       Stack.aws,
     ],
     dimensions: [360, 640],
-    screenshots: ['/static/projects/snowflake/snowflake.png'],
+    screenshots: ['/static/projects/snowflake/logo.png'],
     deployment: {
       web: 'https://snowflake.com',
     },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     title: 'Air Premia Data Platform',
     slug: 'airpremia',
-    banner: '/static/projects/airpremia/airpremia.png',
+    banner: '/static/projects/airpremia/logo.png',
     website: 'https://airpremia.com',
     description:
       'Built end-to-end data infrastructure for airline operations. Implemented real-time analytics pipelines for flight operations, customer insights, and revenue optimization.',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       Stack.gcp,
     ],
     dimensions: [360, 640],
-    screenshots: ['/static/projects/airpremia/airpremia.png'],
+    screenshots: ['/static/projects/airpremia/logo.png'],
     deployment: {
       web: 'https://airpremia.com',
     },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   {
     title: 'Singapore Startup (CTO)',
     slug: 'singapore-startup',
-    banner: '/static/projects/class101/class101.png',
+    banner: '/static/projects/singapore-startup/logo.png',
     website: '#',
     description:
       'Led technical strategy as CTO for a Singapore-based startup. Designed and deployed recommendation engines using Deep Learning (LightGCN), resolved cold-start problems with ALS methods, and built the entire backend system with NestJS and GraphQL.',
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       Stack.aws,
     ],
     dimensions: [360, 640],
-    screenshots: ['/static/projects/class101/class101.png'],
+    screenshots: ['/static/projects/singapore-startup/logo.png'],
     deployment: {
       web: '#',
     },
