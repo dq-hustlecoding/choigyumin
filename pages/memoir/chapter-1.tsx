@@ -1,71 +1,146 @@
-import { HiddenPageSEO } from '@/components/SEO';
-import SectionContainer from '@/components/SectionContainer';
-import Link from '@/components/Link';
-
-// 숨겨진 인생 스토리 - 1화
-// 검색엔진에 인덱싱되지 않음
+import MemoirLayout from '@/layouts/MemoirLayout';
 
 export default function Chapter1() {
   return (
-    <>
-      <HiddenPageSEO title="1화. 시작 - My Memoir" />
-      <SectionContainer>
-        <article className="fade-in">
-          <header className="pt-6 pb-8">
-            <div className="space-y-1 text-center">
-              <dl>
-                <dt className="sr-only">Published on</dt>
-                <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  2026년 1월 19일
-                </dd>
-              </dl>
-              <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-                1화. 시작
-              </h1>
-            </div>
-          </header>
+    <MemoirLayout currentSlug="chapter-1">
+      <h2>유난히 추웠던 그 겨울</h2>
 
-          <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
-            <p>
-              안녕하세요, 이곳은 제 비밀스러운 이야기를 담는 공간입니다.
-            </p>
-            
-            <h2>🌱 테스트 콘텐츠</h2>
-            <p>
-              이 페이지는 테스트용으로 만들어졌습니다. 여기에 인생 스토리를 연재할 수 있어요.
-            </p>
-            
-            <blockquote>
-              &ldquo;모든 위대한 이야기는 작은 시작에서 비롯된다.&rdquo;
-            </blockquote>
+      <p>
+        서울 강서구 화곡동.
+        내 기억 중 가장 오래된 조각은 그곳에서 시작된다.
+      </p>
 
-            <h2>✨ 이 페이지의 특징</h2>
-            <ul>
-              <li>검색엔진에 인덱싱되지 않습니다 (noindex, nofollow)</li>
-              <li>메뉴에 표시되지 않습니다</li>
-              <li>직접 URL을 아는 사람만 접근할 수 있습니다</li>
-            </ul>
+      <p>
+        작은 빌라의 반지하였던 것 같다.
+        창문으로 들어오는 빛이 항상 부족했고,
+        겨울이면 유난히 추웠다.
+        보일러를 틀어도 바닥에서 올라오는 냉기가 매서웠던 기억.
+      </p>
 
-            <h2>📝 앞으로의 계획</h2>
-            <p>
-              이곳에 당신의 인생 스토리를 자유롭게 연재해보세요.
-              글을 추가하려면 <code>/pages/memoir/</code> 폴더에 새 파일을 만들면 됩니다.
-            </p>
-          </div>
+      <p>
+        그 집에서 가장 선명한 기억은 옆집 김씨네 남매다.
+        경미, 경석이라는 이름의 남매가 살았는데,
+        경석이 형은 나보다 서너 살 많았던 것 같다.
+      </p>
 
-          <footer className="border-t border-gray-200 dark:border-gray-700 pt-6">
-            <div className="flex justify-between text-sm font-medium">
-              <Link
-                href="/memoir"
-                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-              >
-                &larr; 목록으로
-              </Link>
-              {/* 다음 화가 생기면 여기에 추가 */}
-            </div>
-          </footer>
-        </article>
-      </SectionContainer>
-    </>
+      <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
+        &ldquo;규민아, 나와서 놀자!&rdquo;
+      </p>
+
+      <p>
+        복도에서 들려오는 경석이 형의 목소리.
+        나는 신발을 신고 후다닥 뛰어나갔다.
+        그 시절의 놀이란 별거 없었다.
+        빌라 앞 골목에서 뛰어다니고,
+        숨바꼭질을 하고,
+        가끔 경석이 형이 가지고 있던 게임기를 구경하는 것.
+      </p>
+
+      <hr className="my-8" />
+
+      <h2>곰달래 유치원</h2>
+
+      <p>
+        화곡동에서 다녔던 유치원 이름은 &lsquo;곰달래 유치원&rsquo;이었다.
+        솔직히 그때 기억은 거의 없다.
+      </p>
+
+      <p>
+        희미하게 떠오르는 건 노란색 통학버스,
+        점심시간에 먹던 카레 냄새,
+        그리고 낮잠 시간이 싫었다는 것 정도.
+      </p>
+
+      <p>
+        아마 평범한 유치원 생활이었을 것이다.
+        특별히 말썽을 피우지도,
+        특별히 눈에 띄지도 않는 조용한 아이.
+        그게 그 시절의 나였다.
+      </p>
+
+      <hr className="my-8" />
+
+      <h2>시화로의 이사</h2>
+
+      <p>
+        화곡동 생활은 그리 오래가지 않았다.
+        아버지의 직장 문제였는지, 다른 이유가 있었는지,
+        우리 가족은 경기도 시흥의 시화신도시로 이사를 가게 됐다.
+      </p>
+
+      <p>
+        시화.
+        그 시절에는 막 개발이 시작된 신도시였다.
+        아파트들이 빼곡히 들어서고,
+        새 학교들이 생겨나던 그런 곳.
+      </p>
+
+      <p>
+        우리 가족이 들어간 곳은 신동아아파트였다.
+        나중에 알게 된 사실이지만,
+        그때 부모님은 분당이나 잠실 쪽 아파트도 고려하셨다고 한다.
+      </p>
+
+      <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
+        &ldquo;그때 분당을 샀으면...&rdquo;
+      </p>
+
+      <p>
+        엄마가 가끔 한숨처럼 내뱉던 말.
+        시화와 분당의 집값 차이가 벌어질 때마다 나오는 그 말을
+        어린 나는 이해하지 못했다.
+      </p>
+
+      <p>
+        하지만 지금 생각해보면,
+        시화에 살았기 때문에 만날 수 있었던 사람들이 있다.
+        그 시절 그곳에서만 만날 수 있었던 친구들.
+        인생의 방향을 바꿔놓은 만남들.
+      </p>
+
+      <p>
+        어쩌면 분당에 살았다면,
+        지금의 내가 되지 못했을지도 모른다.
+      </p>
+
+      <hr className="my-8" />
+
+      <h2>보람유치원, 그리고 첫 번째 인연</h2>
+
+      <p>
+        시화에서 다니게 된 유치원은 &lsquo;보람유치원&rsquo;이었다.
+        초록반에 배정됐고, 거기서 한 아이를 만났다.
+      </p>
+
+      <p>
+        정씨.
+      </p>
+
+      <p>
+        그때는 서로 내성적이어서 말을 별로 안 했다.
+        그냥 옆자리에 앉아 있는 조용한 아이.
+        쉬는 시간에도 각자 놀고,
+        점심시간에도 특별히 대화를 나누지 않았던 것 같다.
+      </p>
+
+      <p>
+        하지만 운명은 이상한 방식으로 작동한다.
+        이 조용한 아이와 나는 훗날 20년이 넘는 우정을 이어가게 된다.
+        그것도 &lsquo;의형제&rsquo;라는 이름으로.
+      </p>
+
+      <p>
+        물론 그때의 우리는 그런 걸 알 리가 없었다.
+        그냥 옆자리에 앉은 조용한 애.
+        그게 정씨에 대한 첫인상의 전부였다.
+      </p>
+
+      <hr className="my-8" />
+
+      <p className="text-center text-gray-500 dark:text-gray-400 italic">
+        그리고 아버지의 갑작스러운 발령 소식이 들려왔다.<br />
+        행선지는 제주도.
+      </p>
+    </MemoirLayout>
   );
 }

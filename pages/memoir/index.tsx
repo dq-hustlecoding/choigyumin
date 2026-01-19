@@ -1,18 +1,10 @@
 import { HiddenPageSEO } from '@/components/SEO';
 import SectionContainer from '@/components/SectionContainer';
 import Link from '@/components/Link';
+import { stories } from '@/layouts/MemoirLayout';
 
 // 숨겨진 인생 스토리 목록 페이지
 // 검색엔진에 인덱싱되지 않음 - 직접 URL로만 접근 가능
-
-const stories = [
-  {
-    slug: 'chapter-1',
-    title: '1화. 시작',
-    date: '2026-01-19',
-    excerpt: '모든 이야기에는 시작이 있다...',
-  },
-];
 
 export default function MemoirIndex() {
   return (
@@ -20,53 +12,73 @@ export default function MemoirIndex() {
       <HiddenPageSEO title="My Memoir - 비공개 스토리" />
       <SectionContainer>
         <div className="fade-in">
-          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          {/* 헤더 */}
+          <div className="space-y-4 pt-6 pb-8 md:space-y-5 text-center">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               📖 나의 이야기
             </h1>
-            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              이 페이지는 검색엔진에 노출되지 않는 비공개 공간입니다.
+            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+              화곡동에서 시작해 제주, 시흥, 안산을 거쳐 서울대까지.
               <br />
-              직접 URL을 아는 사람만 접근할 수 있어요.
+              끊임없이 떠돌았던 한 소년의 성장기.
             </p>
+            <div className="pt-2">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-200">
+                🔒 이 페이지는 검색엔진에 노출되지 않습니다
+              </span>
+            </div>
           </div>
 
+          {/* 스토리 목록 */}
           <div className="divide-y divide-gray-200 dark:divide-gray-700">
-            {stories.map((story) => (
-              <article key={story.slug} className="py-6">
-                <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      {story.date}
-                    </dd>
-                  </dl>
-                  <div className="space-y-3 xl:col-span-3">
-                    <div>
-                      <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link
-                          href={`/memoir/${story.slug}`}
-                          className="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400"
-                        >
+            {stories.map((story, index) => (
+              <article key={story.slug} className="py-6 group">
+                <Link
+                  href={`/memoir/${story.slug}`}
+                  className="block hover:bg-gray-50 dark:hover:bg-gray-800/50 -mx-4 px-4 py-4 rounded-lg transition-colors"
+                >
+                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <div className="flex items-center gap-3 xl:block">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-bold text-sm">
+                        {story.chapter === 0 ? '序' : story.chapter}
+                      </span>
+                      <dl className="xl:mt-2">
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          {story.date}
+                        </dd>
+                      </dl>
+                    </div>
+                    <div className="space-y-3 xl:col-span-3">
+                      <div>
+                        <h2 className="text-xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 group-hover:text-primary-500 transition-colors">
                           {story.title}
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {story.excerpt}
-                    </div>
-                    <div className="text-base font-medium leading-6">
-                      <Link
-                        href={`/memoir/${story.slug}`}
-                        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                      >
-                        읽기 &rarr;
-                      </Link>
+                        </h2>
+                      </div>
+                      <p className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        {story.excerpt}
+                      </p>
+                      <div className="text-base font-medium leading-6">
+                        <span className="text-primary-500 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                          읽기 →
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </article>
             ))}
+          </div>
+
+          {/* 하단 안내 */}
+          <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl text-center">
+            <p className="text-gray-600 dark:text-gray-400">
+              이 이야기는 실화를 바탕으로 각색되었습니다.
+              <br />
+              <span className="text-sm">
+                등장인물의 이름은 프라이버시 보호를 위해 변경되었습니다.
+              </span>
+            </p>
           </div>
         </div>
       </SectionContainer>
