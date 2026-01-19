@@ -117,6 +117,23 @@ interface BlogSeoProps extends PostFrontMatter {
   url: string;
 }
 
+// 검색엔진에서 인덱싱되지 않는 숨겨진 페이지용 SEO
+interface HiddenPageSEOProps {
+  title: string;
+  description?: string;
+}
+
+export const HiddenPageSEO = ({ title, description = '' }: HiddenPageSEOProps) => {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name='robots' content='noindex, nofollow' />
+      <meta name='googlebot' content='noindex, nofollow' />
+      {description && <meta name='description' content={description} />}
+    </Head>
+  );
+};
+
 export const BlogSEO = ({
   authorDetails,
   title,
