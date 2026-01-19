@@ -36,7 +36,7 @@ export default function Chapter1() {
             </p>
             
             <blockquote>
-              "모든 위대한 이야기는 작은 시작에서 비롯된다."
+              &ldquo;모든 위대한 이야기는 작은 시작에서 비롯된다.&rdquo;
             </blockquote>
 
             <h2>✨ 이 페이지의 특징</h2>
