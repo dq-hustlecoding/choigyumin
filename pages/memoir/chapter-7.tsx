@@ -1,5 +1,5 @@
 import MemoirLayout from '@/layouts/MemoirLayout';
-import { TimelineHeader, LifeGraph, lifePoints } from '@/components/memoir';
+import { TimelineHeader } from '@/components/memoir';
 
 export default function Chapter7() {
   return (
@@ -14,24 +14,16 @@ export default function Chapter7() {
       <h2>D-Day</h2>
 
       <p>
-        2009년 11월.
         그날이 왔다.
         12년간의 학생 생활을 결산하는 날.
         대한민국의 모든 고3에게 운명의 날.
       </p>
 
       <p>
-        아침에 눈을 떴을 때의 기분을 아직도 기억한다.
         긴장됐지만, 동시에 담담했다.
-        &ldquo;드디어 왔구나&rdquo;라는 느낌.
-        기다리던 날이 왔다는 안도감 같은 것.
-      </p>
-
-      <p>
         할 만큼 했다는 생각.
         3년간 기숙사에서 공부한 것들,
         192등에서 시작해서 여기까지 온 과정.
-        새벽까지 자습실에서 버틴 밤들.
         후회 없이 준비했다.
       </p>
 
@@ -43,38 +35,6 @@ export default function Chapter7() {
         스스로에게 그렇게 말했다.
         특별한 걸 할 필요 없다.
         그냥 지금까지 해온 대로만 하면 된다.
-        새로운 전략 같은 건 필요 없다.
-        평소에 하던 대로.
-      </p>
-
-      <hr className="my-8" />
-
-      <h2>시험장에서</h2>
-
-      <p>
-        시험장으로 가는 버스 안.
-        모두가 조용했다.
-        각자 생각에 잠겨 있었다.
-        긴장한 얼굴, 담담한 얼굴, 졸린 얼굴.
-        다양한 표정들이 스쳐 지나갔다.
-      </p>
-
-      <p>
-        시험장에 도착해서 자리에 앉았다.
-        책상 위에 연필과 지우개를 정리했다.
-        시계를 확인했다.
-        심호흡을 했다.
-      </p>
-
-      <p>
-        &ldquo;시작하세요.&rdquo;
-      </p>
-
-      <p>
-        감독관의 말과 함께 시험지를 펼쳤다.
-        그 순간, 머릿속이 맑아졌다.
-        긴장이 사라지고 집중만 남았다.
-        3년간 해온 대로, 문제를 읽고, 풀고, 답을 적었다.
       </p>
 
       <hr className="my-8" />
@@ -92,32 +52,17 @@ export default function Chapter7() {
 
       <p>
         원하던 성적이 나왔다.
-        물론 과탐이 조금 아쉬웠다.
-        실수한 문제가 있었다.
-        하지만 전체적으로 충분히 좋은 성적이었다.
-        지금도 그렇게 생각한다.
-      </p>
-
-      <p>
-        서울대를 노려볼 수 있는 점수.
-        책상에 써놓은 그 목표에 다가갈 수 있는 점수.
+        물론 과탐이 조금 아쉬웠지만,
+        충분히 좋은 성적이라고 아직도 생각한다.
       </p>
 
       <hr className="my-8" />
 
-      <h2>세 번의 선택</h2>
+      <h2>정시 지원</h2>
 
       <p>
-        정시 지원.
         가군, 나군, 다군.
         세 번의 기회.
-      </p>
-
-      <p>
-        어디에 지원할지 고민했다.
-        서울대만 고집할 수는 없었다.
-        떨어지면 재수를 해야 했으니까.
-        전략적인 선택이 필요했다.
       </p>
 
       <p>
@@ -127,22 +72,10 @@ export default function Chapter7() {
       </p>
 
       <p>
+        전략적인 선택이었다.
         서울대가 가장 가고 싶은 곳이었지만,
         떨어질 경우를 대비해 한의대와 의대도 넣었다.
         부모님의 바람도 있었다.
-      </p>
-
-      <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
-        &ldquo;의사가 되면 좋잖아. 안정적이고.&rdquo;<br />
-        &ldquo;네, 알아요... 근데 전 수학이 좋은데...&rdquo;<br />
-        &ldquo;그래도 일단 넣어봐. 붙으면 그때 생각하자.&rdquo;
-      </p>
-
-      <p>
-        솔직히 의대나 한의대에 큰 미련은 없었다.
-        하지만 안전하게 가는 것도 나쁘지 않다고 생각했다.
-        최악의 경우를 대비하는 것.
-        그게 어른이 되는 거라고 생각했다.
       </p>
 
       <hr className="my-8" />
@@ -167,21 +100,12 @@ export default function Chapter7() {
         책상에 써놓은 그 다짐.
         &ldquo;서울대학교 수리통계학과&rdquo;.
         3년간 매일 보며 공부했던 그 글씨.
-        그 꿈이 무너지는 순간.
       </p>
 
       <p>
         허탈했다.
-        성적이 나쁘지 않았는데.
-        충분히 될 줄 알았는데.
-      </p>
-
-      <p>
         하지만 원광대 한의대라도 붙었으니까,
         일단 등록금을 넣었다.
-        한의사가 되는 것도 나쁘지 않다고 생각했다.
-        수리통계보다는 실용적이니까.
-        부모님도 기뻐하셨다.
       </p>
 
       <hr className="my-8" />
@@ -189,38 +113,14 @@ export default function Chapter7() {
       <h2>두 번째 반전</h2>
 
       <p>
-        며칠 후.
-        한림대 의대에서 연락이 왔다.
-      </p>
-
-      <p className="font-bold text-center my-4">
+        며칠 후, 한림대 의대에서 연락이 왔다.
         추가합격.
-      </p>
-
-      <p>
-        의대!
-        원광대 한의대보다 낫지 않나?
-        의사가 한의사보다 낫지 않나?
-        적어도 세간의 평가는 그랬다.
       </p>
 
       <p>
         원광대 등록금을 취소하고,
         한림대 의대 등록금을 넣었다.
-        춘천인지 원주인지, 한림대가 있는 곳에
-        자취할 방을 구하러 부모님이 출발했다.
-      </p>
-
-      <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
-        &ldquo;이제 의대생이구나.&rdquo;<br />
-        &ldquo;네... 그런 것 같아요.&rdquo;
-      </p>
-
-      <p>
-        복잡한 기분이었다.
-        서울대는 아니지만, 의대라면 나쁘지 않다.
-        스스로를 그렇게 위로했다.
-        수학은 못하지만, 의사가 되는 것도 괜찮아.
+        부모님이 자취할 방을 구하러 출발했다.
       </p>
 
       <hr className="my-8" />
@@ -230,30 +130,19 @@ export default function Chapter7() {
       <p>
         그 사이에 설날이 있었다.
         친척들이 모이면 당연히 내 이야기가 나왔다.
-        입시 결과는 온 가족의 관심사니까.
       </p>
 
       <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
         &ldquo;규민이 한림대 의대 갔다며?&rdquo;<br />
-        &ldquo;의대면 됐지, 뭘. 의사 되는 거잖아.&rdquo;<br />
+        &ldquo;의대면 됐지, 뭘.&rdquo;<br />
         &ldquo;근데 서울대 떨어진 게 좀 아쉽네.&rdquo;<br />
-        &ldquo;재수하면 안 돼? 서울대 가면 더 좋잖아.&rdquo;<br />
-        &ldquo;에이, 의대인데 뭘. 그냥 가.&rdquo;<br />
-        &ldquo;나는 재수해서 더 좋은 데 가는 게...&rdquo;
+        &ldquo;재수하면 안 돼?&rdquo;
       </p>
 
       <p>
         여러 친척들이 훈수를 뒀다.
         각자의 의견, 각자의 조언.
         감사하면서도 피곤했다.
-        이미 등록금까지 낸 상황에서
-        재수 이야기가 나오니까.
-      </p>
-
-      <p>
-        그냥 웃으면서 넘겼다.
-        &ldquo;네, 생각해볼게요&rdquo;라고만 했다.
-        속으로는 &ldquo;이미 결정된 거야&rdquo;라고 생각하면서.
       </p>
 
       <hr className="my-8" />
@@ -261,15 +150,8 @@ export default function Chapter7() {
       <h2>운명의 전화</h2>
 
       <p>
-        설 연휴가 끝나고.
         부모님이 한림대 근처 자취방을 보러 가는 길이었다.
-        나는 집에 있었고, 부모님은 차를 타고 가셨다.
-      </p>
-
-      <p>
         차 안에서 전화가 울렸다.
-        모르는 번호.
-        아빠가 전화를 받으셨다.
       </p>
 
       <p className="font-bold text-center my-6 text-2xl">
@@ -279,33 +161,18 @@ export default function Chapter7() {
       <p>
         엄마가 전화를 받고 소리를 질렀다고 한다.
         아빠가 운전하다가 깜짝 놀랐다고.
-        &ldquo;뭐야! 왜 그래!&rdquo;
-        &ldquo;서울대 붙었대!&rdquo;
-      </p>
-
-      <p>
-        집에서 전화를 받은 나도 믿기지 않았다.
       </p>
 
       <p className="pl-4 border-l-4 border-gray-300 dark:border-gray-600 italic">
         &ldquo;규민아! 서울대 붙었대!&rdquo;<br />
         &ldquo;...진짜요?&rdquo;<br />
-        &ldquo;진짜! 추가합격!&rdquo;<br />
-        &ldquo;... 진짜요?&rdquo;<br />
-        &ldquo;진짜라니까!&rdquo;
+        &ldquo;진짜! 추가합격!&rdquo;
       </p>
 
       <p>
         전화를 끊고 나서도 믿기지 않았다.
         한림대 등록금 넣은 지 얼마 안 됐는데.
         자취방 보러 가는 길에 이런 소식을 듣다니.
-        드라마도 이렇게 안 쓴다.
-      </p>
-
-      <p>
-        부모님은 바로 차를 돌리셨다.
-        자취방 보러 갈 필요가 없어졌으니까.
-        서울대 다니면 집에서 통학할 수 있으니까.
       </p>
 
       <hr className="my-8" />
@@ -323,16 +190,7 @@ export default function Chapter7() {
 
       <p>
         3년간 매일 보며 다짐했던 그 글씨.
-        포스트잇에 적어서 책상에 붙여놨던 그 글씨.
         그게 현실이 됐다.
-      </p>
-
-      <p>
-        192등에서 시작해서 19등으로 졸업하고,
-        서울대 수리통계학과에 입학.
-        과학고에 떨어지고, 수시에서도 떨어지고,
-        정시 1차에서도 떨어졌다가
-        추가합격으로 들어간 서울대.
       </p>
 
       <p>
@@ -341,15 +199,6 @@ export default function Chapter7() {
         말과 글에는 힘이 있다.
         매일 보고, 매일 되뇌면,
         그것은 어느새 현실이 된다.
-      </p>
-
-      <p>
-        물론 그냥 써놓기만 하면 되는 건 아니다.
-        써놓고, 그걸 위해 노력해야 한다.
-        3년간의 기숙사 생활,
-        새벽까지의 자습,
-        포기하지 않은 마음.
-        그것들이 있었기에 가능했다.
       </p>
 
       <hr className="my-8" />
@@ -374,18 +223,6 @@ export default function Chapter7() {
         자신만의 길을 찾은 순간이다.
       </p>
 
-      <p>
-        물론 이게 끝은 아니다.
-        대학 생활, 취업, 연애, 결혼.
-        인생은 계속된다.
-        서울대 입학은 끝이 아니라 새로운 시작이었다.
-      </p>
-
-      <p>
-        하지만 그건 또 다른 이야기.
-        지금은 여기서 멈추자.
-      </p>
-
       <hr className="my-8" />
 
       <p className="text-center text-lg font-semibold mb-4">
@@ -407,13 +244,7 @@ export default function Chapter7() {
         <p className="text-sm text-primary-600 dark:text-primary-400 mt-2">
           &ldquo;고향 없는 아이의 성장기&rdquo;
         </p>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
-          읽어주셔서 감사합니다.<br />
-          시즌 2는 언젠가... 아마도...
-        </p>
       </div>
-
-      <LifeGraph points={lifePoints} currentYear={2010} />
     </MemoirLayout>
   );
 }

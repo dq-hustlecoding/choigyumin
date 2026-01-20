@@ -1,5 +1,5 @@
 import MemoirLayout from '@/layouts/MemoirLayout';
-import { TimelineHeader, LifeGraph, lifePoints } from '@/components/memoir';
+import { TimelineHeader } from '@/components/memoir';
 
 export default function Prologue() {
   return (
@@ -111,7 +111,7 @@ export default function Prologue() {
 
       <p>
         고향은 장소가 아니라 사람이니까.
-        나의 고향은 민재와 준호.
+        나의 고향은 정희영과 안효준.
         20년 넘게 이어온 의형제들.
         그들이 있는 곳이 나의 고향이다.
       </p>
@@ -123,11 +123,8 @@ export default function Prologue() {
         그곳에서 이 이야기는 시작된다.<br />
         <br />
         1991년생, 지금은 36세.<br />
-        인생의 약 36%를 살아온 시점에서<br />
         지나온 길을 되돌아본다.
       </p>
-
-      <LifeGraph points={lifePoints} currentYear={2026} />
     </MemoirLayout>
   );
 }

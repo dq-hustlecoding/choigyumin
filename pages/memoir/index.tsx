@@ -73,10 +73,10 @@ export default function MemoirIndex() {
           {/* 하단 안내 */}
           <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl text-center">
             <p className="text-gray-600 dark:text-gray-400">
-              이 이야기는 실화를 바탕으로 각색되었습니다.
+              이 이야기는 실화를 바탕으로 작성되었습니다.
               <br />
               <span className="text-sm">
-                등장인물의 이름은 프라이버시 보호를 위해 변경되었습니다.
+                일부 에피소드는 생동감을 위해 각색되었습니다.
               </span>
             </p>
           </div>
