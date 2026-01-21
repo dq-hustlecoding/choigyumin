@@ -86,6 +86,15 @@ export const stories: StoryMeta[] = [
     year: 2010,
     age: 20,
   },
+  {
+    slug: 'chapter-8',
+    chapter: 8,
+    title: '8화. 관악산 아래에서',
+    date: '2026-01-21',
+    excerpt: '서울대라는 명함이 열어준 세상. 오르비 91동, 총연극회, 그리고 새로운 인연들.',
+    year: 2010,
+    age: 20,
+  },
 ];
 
 interface Props {

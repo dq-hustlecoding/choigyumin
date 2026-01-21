@@ -231,18 +231,18 @@ export default function Chapter7() {
       </p>
 
       <p className="text-center text-gray-500 dark:text-gray-400 italic">
-        이 이야기는 계속된다.<br />
-        대학 생활, 스타트업, 결혼, 그리고 그 이후...<br />
+        고향 없이 떠돌던 아이가<br />
+        서울대학교라는 새로운 세상에 발을 딛는다.<br />
         <br />
-        하지만 그것은 다음 시즌에서.
+        이야기는 계속된다.
       </p>
 
       <div className="mt-12 p-6 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl text-center">
         <p className="text-primary-700 dark:text-primary-300 font-bold text-lg">
-          📖 시즌 1 완결
+          📖 시즌 1 완결 - 시즌 2 시작
         </p>
         <p className="text-sm text-primary-600 dark:text-primary-400 mt-2">
-          &ldquo;고향 없는 아이의 성장기&rdquo;
+          다음 화: 관악산 아래에서
         </p>
       </div>
     </MemoirLayout>
