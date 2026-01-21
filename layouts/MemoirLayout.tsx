@@ -10,7 +10,56 @@ export interface StoryMeta {
   excerpt: string;
   year: number;
   age: number;
+  season?: number;
 }
+
+// 시즌별 테마 설정
+export const seasonThemes = {
+  0: {
+    name: '프롤로그',
+    color: 'slate',
+    gradient: 'from-slate-500 to-slate-700',
+    bg: 'bg-slate-50 dark:bg-slate-900/30',
+    border: 'border-slate-300 dark:border-slate-700',
+    text: 'text-slate-600 dark:text-slate-400',
+    badge: 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200',
+  },
+  1: {
+    name: '시즌 1: 성장기',
+    color: 'emerald',
+    gradient: 'from-emerald-500 to-teal-600',
+    bg: 'bg-emerald-50 dark:bg-emerald-900/20',
+    border: 'border-emerald-300 dark:border-emerald-700',
+    text: 'text-emerald-600 dark:text-emerald-400',
+    badge: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200',
+  },
+  2: {
+    name: '시즌 2: 대학생활',
+    color: 'blue',
+    gradient: 'from-blue-500 to-indigo-600',
+    bg: 'bg-blue-50 dark:bg-blue-900/20',
+    border: 'border-blue-300 dark:border-blue-700',
+    text: 'text-blue-600 dark:text-blue-400',
+    badge: 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200',
+  },
+  3: {
+    name: '시즌 3: 사회인의 삶',
+    color: 'amber',
+    gradient: 'from-amber-500 to-orange-600',
+    bg: 'bg-amber-50 dark:bg-amber-900/20',
+    border: 'border-amber-300 dark:border-amber-700',
+    text: 'text-amber-600 dark:text-amber-400',
+    badge: 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200',
+  },
+};
+
+// 챕터에서 시즌 추출
+export const getSeason = (chapter: number): number => {
+  if (chapter === 0) return 0;
+  if (chapter >= 1 && chapter <= 7) return 1;
+  if (chapter >= 8 && chapter <= 11) return 2;
+  return 3;
+};
 
 // 스토리 목록 데이터
 export const stories: StoryMeta[] = [
@@ -127,7 +176,8 @@ export const stories: StoryMeta[] = [
     chapter: 12,
     title: '12화. 퇴직금 못 받는 DNA',
     date: '2026-01-21',
-    excerpt: 'OBS Korea, 나노포커스레이, 딥스튜디오, 코렌스. 8개월마다 회사를 옮기던 시절.',
+    excerpt:
+      'OBS Korea, 나노포커스레이, 딥스튜디오, 코렌스. 8개월마다 회사를 옮기던 시절. 그리고 2018년 10월, 결혼.',
     year: 2017,
     age: 27,
   },
@@ -170,14 +220,23 @@ export default function MemoirLayout({ children, currentSlug }: Props) {
   const currentStory = stories[currentIndex];
   const prevStory = currentIndex > 0 ? stories[currentIndex - 1] : null;
   const nextStory = currentIndex < stories.length - 1 ? stories[currentIndex + 1] : null;
+  const season = currentStory ? getSeason(currentStory.chapter) : 0;
+  const theme = seasonThemes[season as keyof typeof seasonThemes];
 
   return (
     <>
       <HiddenPageSEO title={`${currentStory?.title || 'Memoir'} - 비공개 스토리`} />
       <SectionContainer>
         <article className="fade-in">
+          {/* 시즌 배너 */}
+          <div
+            className={`mb-6 py-2 px-4 rounded-full text-center text-sm font-medium ${theme.badge}`}
+          >
+            {theme.name}
+          </div>
+
           {/* 헤더 */}
-          <header className="pt-6 pb-8">
+          <header className="pt-2 pb-8">
             <div className="space-y-1 text-center">
               <div className="mb-4">
                 <Link
@@ -189,8 +248,8 @@ export default function MemoirLayout({ children, currentSlug }: Props) {
               </div>
               <dl>
                 <dt className="sr-only">Published on</dt>
-                <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  {currentStory?.date}
+                <dd className={`text-base font-medium leading-6 ${theme.text}`}>
+                  {currentStory?.year}년 · {currentStory?.age}세
                 </dd>
               </dl>
               <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
