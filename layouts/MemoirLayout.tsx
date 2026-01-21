@@ -122,6 +122,42 @@ export const stories: StoryMeta[] = [
     year: 2015,
     age: 25,
   },
+  {
+    slug: 'chapter-12',
+    chapter: 12,
+    title: '12화. 퇴직금 못 받는 DNA',
+    date: '2026-01-21',
+    excerpt: 'OBS Korea, 나노포커스레이, 딥스튜디오, 코렌스. 8개월마다 회사를 옮기던 시절.',
+    year: 2017,
+    age: 27,
+  },
+  {
+    slug: 'chapter-13',
+    chapter: 13,
+    title: '13화. 싱가포르의 빛과 그림자',
+    date: '2026-01-21',
+    excerpt: '클래스101의 열정, 그리고 싱가포르 릴리에서의 좌절. 해외 생활의 꿈과 현실.',
+    year: 2020,
+    age: 30,
+  },
+  {
+    slug: 'chapter-14',
+    chapter: 14,
+    title: '14화. 177 Bleecker Street',
+    date: '2026-01-21',
+    excerpt: '뉴욕 맨해튼, 워싱턴스퀘어 옆. 꿈같던 나날과 월급 없는 3개월.',
+    year: 2022,
+    age: 32,
+  },
+  {
+    slug: 'chapter-15',
+    chapter: 15,
+    title: '15화. 그리고 계속되는 이야기',
+    date: '2026-01-21',
+    excerpt: '에어프레미아, 스노우플레이크, 그리고 아들 수호. 36세, 여전히 고민 중.',
+    year: 2026,
+    age: 36,
+  },
 ];
 
 interface Props {
