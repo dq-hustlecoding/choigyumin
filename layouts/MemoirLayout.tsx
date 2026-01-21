@@ -95,6 +95,33 @@ export const stories: StoryMeta[] = [
     year: 2010,
     age: 20,
   },
+  {
+    slug: 'chapter-9',
+    chapter: 9,
+    title: '9화. 방황의 시작',
+    date: '2026-01-21',
+    excerpt: '대구 친구들, 과외의 나날, 그리고 학점은 개판. 서울대를 들어왔다는 것만으로 살던 시절.',
+    year: 2011,
+    age: 21,
+  },
+  {
+    slug: 'chapter-10',
+    chapter: 10,
+    title: '10화. 로키산맥의 겨울',
+    date: '2026-01-21',
+    excerpt: '공익, 그리고 캐나다. 크레스톤의 사과 축제와 고모부에게 배운 프로그래밍.',
+    year: 2012,
+    age: 22,
+  },
+  {
+    slug: 'chapter-11',
+    chapter: 11,
+    title: '11화. 스타트업의 꿈',
+    date: '2026-01-21',
+    excerpt: '복학, 컴공 복수전공, 그리고 김문석과의 창업. 봉천동에서의 폐업까지.',
+    year: 2015,
+    age: 25,
+  },
 ];
 
 interface Props {
