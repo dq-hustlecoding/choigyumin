@@ -1,0 +1,247 @@
+---
+title: 'Building an AI Data Analyst with Snowflake Intelligence: A Practical Guide'
+date: '2025-01-23'
+tags: ['snowflake', 'ai', 'cortex', 'data-analytics', 'llm']
+draft: false
+summary: 'How to build a conversational AI analyst that actually understands your business terminology using Snowflake Cortex Analyst and Intelligence Agents'
+authors: ['default']
+---
+
+Natural language interfaces to data have been promised for decades. "Just ask your data a question!" has been the pitch of countless BI tools. Most failed because they could not handle the complexity of real business terminology.
+
+Snowflake Intelligence is different. After building several implementations, I can say it actually works - but only if you set it up correctly. Here is what I have learned.
+
+## What Snowflake Intelligence Actually Is
+
+Snowflake Intelligence combines three key capabilities:
+
+1. **Cortex Analyst**: Converts natural language to SQL using semantic understanding
+2. **Cortex Search**: Enables RAG over unstructured documents
+3. **Custom Tools**: Connects external APIs and services
+
+This post focuses on Cortex Analyst and Intelligence Agents - the foundation for structured data analysis.
+
+## Why Most Natural Language to SQL Fails
+
+Traditional NL-to-SQL approaches struggle because:
+
+**They do not understand business context.** When someone asks "How are our HVC customers performing?", the system needs to know that HVC means "High Value Customer" and that it is defined as the top 5% by lifetime purchase value.
+
+**They cannot handle company-specific terminology.** Every business has its own vocabulary. RFM segments, customer tiers, product categories - these mean different things in different organizations.
+
+**They lack domain knowledge.** Without understanding your data model and business rules, the generated SQL is often wrong.
+
+Snowflake addresses these through Semantic Views - a layer that encodes business meaning on top of your physical data model.
+
+## Setting Up Cortex Analyst
+
+### Step 1: Create a Semantic View
+
+The Semantic View is where you define the relationship between your data and business concepts. You can create one through the Snowsight UI:
+
+1. Navigate to **AI & ML → Cortex Analyst**
+2. Click **Create new → Create new Semantic View**
+3. Select your tables and columns
+
+For a food truck business analytics platform, you might select tables like:
+- `ORDER_HEADER` - Order information
+- `ORDER_DETAIL` - Line item details
+- `MENU` - Product catalog
+- `TRUCK` - Location and truck data
+- `CUSTOMER_LOYALTY` - Customer profiles
+
+The system auto-generates initial semantic mappings, but the real power comes from customization.
+
+### Step 2: Test Basic Queries
+
+Once created, test with simple questions:
+
+```
+"What was the total number of customers in 2022?"
+```
+
+Generated SQL:
+```sql
+SELECT
+  COUNT(DISTINCT customer_id) AS total_customers
+FROM order_header
+WHERE DATE_PART('YEAR', order_ts) = 2022
+```
+
+If basic queries work, you have a foundation. Now comes the important part.
+
+## The Secret Sauce: Custom Instructions
+
+Here is where most implementations fall short. Without custom instructions, the AI cannot understand your business-specific terminology.
+
+### The Problem Without Custom Instructions
+
+Try asking: "Compare average order value between HVC customers and regular customers."
+
+Without proper setup, you will get:
+- ⚠️ "I don't understand what HVC means"
+- ⚠️ Incorrect SQL that guesses at the definition
+- ⚠️ Results that do not match your business rules
+
+### Adding Business Rules
+
+In your Semantic View, navigate to **Custom Instructions → SQL Generation** and add your business definitions:
+
+```markdown
+## Customer Segment Definitions
+
+### HVC (High Value Customer)
+- Definition: Top 5% of customers by lifetime purchase value
+- Calculation: PERCENT_RANK() OVER (ORDER BY SUM(ORDER_TOTAL)) >= 0.95
+- Table: ORDER_HEADER grouped by CUSTOMER_ID
+
+### RFM-G (RFM Gold)
+- Definition: Recent purchasers with high frequency and value
+- Criteria:
+  - Last purchase within 30 days
+  - 4+ orders per month
+  - $200+ monthly spend
+
+### Standard Segments (by percentile)
+- VIP/Diamond: percentile >= 0.9 (top 10%)
+- Gold: 0.7 <= percentile < 0.9 (top 11-30%)
+- Silver: 0.5 <= percentile < 0.7 (top 31-50%)
+- Bronze: 0.1 <= percentile < 0.5 (top 51-90%)
+- New/Regular: percentile < 0.1 (bottom 10%)
+
+## Default Metrics (always include when relevant)
+1. Order count (COUNT DISTINCT order_id)
+2. Revenue (SUM order_total)
+3. Customer count
+4. Average order value
+5. Items per order
+```
+
+**Key insight:** Be explicit with SQL logic. The more precise your definitions, the better the generated queries.
+
+### The Difference Custom Instructions Make
+
+After adding business rules, the same question now generates:
+
+```sql
+WITH customer_ranks AS (
+  SELECT
+    CUSTOMER_ID,
+    SUM(ORDER_TOTAL) AS total_purchase,
+    PERCENT_RANK() OVER (ORDER BY SUM(ORDER_TOTAL)) AS percentile
+  FROM order_header
+  GROUP BY CUSTOMER_ID
+),
+customer_segments AS (
+  SELECT
+    CUSTOMER_ID,
+    CASE WHEN percentile >= 0.95 THEN 'HVC' ELSE 'Regular' END AS segment
+  FROM customer_ranks
+)
+SELECT
+  segment,
+  ROUND(AVG(oh.ORDER_TOTAL), 2) AS avg_order_value,
+  COUNT(DISTINCT oh.CUSTOMER_ID) AS customer_count
+FROM order_header oh
+JOIN customer_segments cs ON oh.CUSTOMER_ID = cs.CUSTOMER_ID
+GROUP BY segment
+```
+
+The AI now understands that HVC is a specific calculation, not just a string to search for.
+
+## Connecting to Intelligence Agents
+
+Cortex Analyst becomes more powerful when connected to an Intelligence Agent - a conversational interface that can use multiple tools.
+
+### Creating an Agent
+
+1. Navigate to **AI & ML → Agents**
+2. Create a new agent with a descriptive name
+3. Add Cortex Analyst as a tool, pointing to your Semantic View
+
+The agent can now:
+- Understand context from conversation history
+- Generate appropriate visualizations
+- Provide explanations alongside data
+- Handle follow-up questions
+
+### Example Conversation
+
+**User:** "Show me RFM-G customer monthly revenue for 2022"
+
+**Agent thinking:**
+> The user is asking about RFM-G customers. According to my instructions, RFM-G means customers with: last purchase within 30 days, 4+ monthly orders, and $200+ monthly spend. I need to calculate this segment and then aggregate by month.
+
+**Result:** A monthly trend chart with proper segment filtering, plus an explanation of the criteria used.
+
+This is the experience business users actually want.
+
+## Practical Lessons Learned
+
+### 1. Start with Your Top 10 Business Terms
+
+Do not try to define everything at once. Identify the 10-15 terms your analysts use most frequently and define those first. Expand based on actual questions that fail.
+
+### 2. Include Example Calculations
+
+Instead of just describing what a metric means, include the actual SQL pattern:
+
+```markdown
+**Customer Lifetime Value (CLV)**
+- Meaning: Total revenue from a customer since first purchase
+- SQL Pattern: 
+  SELECT customer_id, SUM(order_total) as clv 
+  FROM orders 
+  GROUP BY customer_id
+```
+
+### 3. Test with Real Questions
+
+Before rolling out, collect 20-30 actual questions from your business users. Test each one. If the generated SQL is wrong, add clarifying instructions.
+
+### 4. Set Reasonable Expectations
+
+Snowflake Intelligence handles about 80% of questions well out of the box with good custom instructions. Complex multi-step analyses still benefit from human oversight.
+
+### 5. Monitor and Iterate
+
+Track which questions produce incorrect results. Use these as feedback to improve your semantic definitions.
+
+## Prerequisites and Setup
+
+For anyone wanting to implement this:
+
+**Required Permissions:**
+```sql
+-- Enable Cross-Region LLM access
+ALTER ACCOUNT SET CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION';
+
+-- Create database for Intelligence objects
+CREATE DATABASE IF NOT EXISTS SNOWFLAKE_INTELLIGENCE;
+CREATE SCHEMA IF NOT EXISTS SNOWFLAKE_INTELLIGENCE.AGENTS;
+```
+
+**Snowflake Requirements:**
+- Trial or Enterprise account with Cortex AI enabled
+- ACCOUNTADMIN or equivalent permissions for initial setup
+- A warehouse for query execution
+
+## What is Next
+
+This covers the structured data analysis piece. In future posts, I will cover:
+- **Cortex Search**: Adding document-based Q&A
+- **Custom Tools**: Connecting external APIs
+- **Advanced Patterns**: Multi-agent architectures
+
+## Conclusion
+
+Snowflake Intelligence is not magic - it is a well-designed system that requires thoughtful configuration. The key insights:
+
+1. **Semantic Views provide the foundation** - but they need your business context
+2. **Custom Instructions are essential** - this is where you encode domain knowledge
+3. **Intelligence Agents enable conversational interfaces** - combining tools for better UX
+4. **Iteration improves accuracy** - treat initial deployment as version 1.0
+
+If you are building conversational analytics, start with a focused use case and expand. The technology works, but the real work is translating your business knowledge into a format the AI can use.
+
+Have you implemented natural language analytics in your organization? I am curious what approaches have worked for you.
