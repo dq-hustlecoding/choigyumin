@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'DQ Gyumin Choi',
-  author: 'DQ Gyumin Choi',
-  headerTitle: 'DQ Gyumin Choi',
+  title: 'Gyumin Choi',
+  author: 'Gyumin Choi',
+  headerTitle: 'Gyumin Choi',
   description:
-    'A software engineer who loves start-up, especially early stage start-ups',
+    'Enterprise Value Engineering Leader & Technical Strategist. Ex-CTO, 2x Author, specializing in Snowflake, SAP HANA, and GenAI.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://choigyumin.pages.dev',
@@ -16,7 +16,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/dq_hustlecoding',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/gyuminchoi',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

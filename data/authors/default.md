@@ -1,47 +1,46 @@
 ---
-name: DQ Gyumin Choi
-shortname: DQ
+name: Gyumin Choi
+shortname: Gyumin
 avatar: /static/dq.png
-occupation: Solution Engineer @ Snowflake
-company: Snowflake
+occupation: Enterprise Value Engineering Leader & Technical Strategist
+company: Celonis (Value Engineering Director Candidate)
 email: dq.data.world@gmail.com
 twitter: https://twitter.com/dq_hustlecoding
 linkedin: https://www.linkedin.com/in/gyuminchoi
 github: https://github.com/dq-hustlecoding
 ---
 
-**Global Data & AI Solutions Engineer** with experience across Singapore, New York, and Seoul. Currently at [Snowflake](https://snowflake.com), helping enterprises transform their data architecture and accelerate AI initiatives.
+**Enterprise Value Engineering Leader & Technical Strategist** with 10+ years of experience across Singapore, New York, and Seoul. Former CTO of a $20M Series A startup and author of two technical books.
 
-## What I Do
+## Key Achievements & Business Impact
 
-I specialize in **Enterprise AI/ML Transformation (AX)** — helping organizations modernize their data infrastructure, optimize data pipelines, and implement scalable AI solutions. My expertise spans:
+I specialize in creating measurable business value through technical excellence:
 
-- **Data Architecture & Strategy** — Multi-cloud data platforms, data mesh, and lakehouse architectures
-- **AI/ML Infrastructure** — Production ML pipelines, MLOps, and AI-ready data foundations  
-- **Cloud Data Platforms** — Snowflake, BigQuery, and modern data stack implementation
+- **$250K Enterprise Deal (Snowflake)**: Led technical closure for GS Engineering & Construction, orchestrating MLflow-to-Snowflake migrations.
+- **40% Efficiency Gain**: Reduced demo preparation time by 40% and improved team productivity by 30% through Claude and AI automation.
+- **40% Customer Growth (Greybox)**: Scaled enterprise customer base by 40% through custom A/B testing modules and data-driven product strategy.
+- **$20M Series A (Singapore Startup)**: Led a team of 7 and secured $20M in funding by building high-performance recommendation engines (LightGCN, ALS).
 
-## Looking to Collaborate?
+## Core Competencies & Value Drivers
 
-If your organization is exploring:
-- Modernizing legacy data infrastructure
-- Building enterprise-grade AI/ML platforms
-- Optimizing cloud data costs (TCO analysis)
-- Implementing data governance at scale
+- **Value Engineering (VE)**: Aligning technical solutions with business ROI and GTM (Go-To-Market) strategies.
+- **Data Architecture**: Expertise in **Snowflake**, **SAP HANA**, and multi-cloud data ecosystems.
+- **Generative AI (GenAI)**: Leading AI transformations and building autonomous automation pipelines.
+- **Leadership**: 10+ years of engineering leadership, including Ex-CTO experience.
 
-Feel free to [schedule a call](https://calendar.app.google/kChErD82BFsh7AJo8) or reach out via email.
+## Publications
+
+I am the author of two technical guides focused on full-stack development and recommendation systems:
+
+- **English**: [Build Your Own Netflix with Python and React](https://a.co/d/crhmMBu) (Amazon)
+- **Korean**: [나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택](http://www.yes24.com/Product/Goods/116009699) (BJ Public)
 
 ---
 
 ### Background
 
-**Education**: Seoul National University (Statistics & Computer Science)
+**Education**:  
+Seoul National University (Statistics & Computer Science)
 
-**Certifications**: SnowPro Core Certified
-
-### Author
-
-I wrote a coding guide book for developers looking to build full-stack applications:
-
-**English**: [Build Your Own Netflix with Python and React](https://a.co/d/crhmMBu) — A Full Stack Guide to Movie Recommendation Systems
-
-**Korean**: [나 혼자 만든다! 영화 추천 웹 서비스로 배우는 풀스택](http://www.yes24.com/Product/Goods/116009699)
+**Certifications**:  
+SnowPro Core Certified

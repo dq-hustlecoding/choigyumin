@@ -16,11 +16,15 @@ export enum Stack {
   node,
   django,
 
-  // Cloud
+  // Cloud & Data
   aws,
   gcp,
   docker,
   kubernetes,
+  snowflake,
+  sap_hana,
+  data_architecture,
+  gen_ai,
 
   // Messaging
   nats,
@@ -33,17 +37,18 @@ export enum Stack {
 }
 
 export const WorkStack = [
-  Stack.typescript,
+  Stack.snowflake,
+  Stack.sap_hana,
+  Stack.gen_ai,
+  Stack.data_architecture,
   Stack.python,
+  Stack.typescript,
   Stack.react,
   Stack.kubernetes,
   Stack.docker,
   Stack.aws,
   Stack.gcp,
   Stack.postgres,
-  Stack.graphql,
-  Stack.reactnative,
-  Stack.node,
 ];
 
 type StackInfoMap = {
@@ -52,6 +57,22 @@ type StackInfoMap = {
 };
 
 export const StackInfo: Record<Stack, StackInfoMap> = {
+  [Stack.snowflake]: {
+    value: 'Snowflake',
+    color: '#29B5E8',
+  },
+  [Stack.sap_hana]: {
+    value: 'SAP HANA',
+    color: '#008FD3',
+  },
+  [Stack.gen_ai]: {
+    value: 'Generative AI',
+    color: '#FF5733',
+  },
+  [Stack.data_architecture]: {
+    value: 'Data Architecture',
+    color: '#58D68D',
+  },
   [Stack.typescript]: {
     value: 'TypeScript',
     color: Colors.typescript,

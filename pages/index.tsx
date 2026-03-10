@@ -49,14 +49,112 @@ export default function Home({
       />
       <Banner frontMatter={author} />
 
-      {/* Recent Posts Section */}
+      {/* Key Achievements Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
+        <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
           <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-            Latest Posts
+            Business Impact & Key Achievements
           </h2>
           <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            Thoughts on software development, startups, and more.
+            Measurable value created through technical leadership and strategic
+            engineering.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-4'>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='mb-2 text-3xl font-bold text-primary-500'>
+              $250K
+            </div>
+            <h3 className='mb-2 text-lg font-bold dark:text-white'>
+              GS E&C Deal
+            </h3>
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Closed enterprise deal by migrating MLflow to Snowflake and
+              designing multi-cloud architecture.
+            </p>
+          </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='mb-2 text-3xl font-bold text-primary-500'>40%</div>
+            <h3 className='mb-2 text-lg font-bold dark:text-white'>
+              Efficiency Gain
+            </h3>
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Reduced demo prep time by 40% and improved team productivity by
+              30% through GenAI automation.
+            </p>
+          </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='mb-2 text-3xl font-bold text-primary-500'>40%</div>
+            <h3 className='mb-2 text-lg font-bold dark:text-white'>
+              Customer Growth
+            </h3>
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Scaled enterprise customer base at Greybox through custom A/B
+              testing and data strategy.
+            </p>
+          </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='mb-2 text-3xl font-bold text-primary-500'>$20M</div>
+            <h3 className='mb-2 text-lg font-bold dark:text-white'>Series A</h3>
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Led technical strategy as CTO for a Singapore startup, securing $20M in funding by building high-performance recommendation engines (LightGCN, ALS).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Core Competencies Section */}
+      <div className='divide-y divide-gray-200 dark:divide-gray-700'>
+        <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
+          <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
+            Core Competencies & Value Drivers
+          </h2>
+          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
+            Bridging the gap between technical complexity and business ROI.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 gap-6 py-8 md:grid-cols-3'>
+          <div className='space-y-3'>
+            <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
+              Value Engineering
+            </h3>
+            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
+              <li>ROI & TCO Analysis</li>
+              <li>GTM Technical Strategy</li>
+              <li>Enterprise Solution Design</li>
+            </ul>
+          </div>
+          <div className='space-y-3'>
+            <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
+              Data & AI Architecture
+            </h3>
+            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
+              <li>Snowflake & SAP HANA</li>
+              <li>GenAI Pipeline Automation</li>
+              <li>Multi-cloud Data Mesh</li>
+            </ul>
+          </div>
+          <div className='space-y-3'>
+            <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
+              Technical Leadership
+            </h3>
+            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
+              <li>Ex-CTO Experience</li>
+              <li>High-Impact Team Building</li>
+              <li>Strategic Roadmapping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Recent Posts Section */}
+      <div className='divide-y divide-gray-200 dark:divide-gray-700'>
+        <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
+          <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
+            Latest Insights
+          </h2>
+          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
+            Thoughts on data strategy, AI transformation, and value engineering.
           </p>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
@@ -107,7 +205,7 @@ export default function Home({
             className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
             aria-label='all posts'
           >
-            All Posts &rarr;
+            All Insights &rarr;
           </Link>
         </div>
       )}
@@ -117,48 +215,94 @@ export default function Home({
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
           <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
             <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-              Featured Projects
+              Strategic Projects
             </h2>
             <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-              Some things I&apos;ve built and contributed to.
+              Technical solutions that drove significant business outcomes.
             </p>
           </div>
           <div className='container py-6'>
             <div className='-m-4 flex flex-wrap'>
-              {config.projects.slice(0, 3).map(({ slug, title, description }) => (
-                <div key={slug} className='p-4 md:w-1/2 lg:w-1/3'>
-                  <div className='h-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700'>
-                    <div className='p-6'>
-                      <h3 className='mb-3 text-lg font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100'>
-                        <Link href={`/projects/${slug}`}>{title}</Link>
-                      </h3>
-                      <p className='prose mb-3 max-w-none text-gray-500 dark:text-gray-400'>
-                        {description}
-                      </p>
-                      <Link
-                        href={`/projects/${slug}`}
-                        className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-                        aria-label={`Read more about ${title}`}
-                      >
-                        Learn more &rarr;
-                      </Link>
+              {config.projects
+                .slice(0, 4)
+                .map(({ slug, title, shortDescription }) => (
+                  <div key={slug} className='p-4 md:w-1/2 lg:w-1/4'>
+                    <div className='h-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700'>
+                      <div className='p-6'>
+                        <h3 className='mb-3 text-lg font-bold leading-8 tracking-tight text-gray-900 dark:text-white'>
+                          <Link href={`/projects/${slug}`}>{title}</Link>
+                        </h3>
+                        <p className='mb-3 text-sm text-gray-500 dark:text-gray-400'>
+                          {shortDescription}
+                        </p>
+                        <Link
+                          href={`/projects/${slug}`}
+                          className='text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                          aria-label={`Read more about ${title}`}
+                        >
+                          Impact Case Study &rarr;
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
-          </div>
-          <div className='flex justify-end pt-4 text-base font-medium leading-6'>
-            <Link
-              href='/projects'
-              className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-              aria-label='all projects'
-            >
-              All Projects &rarr;
-            </Link>
           </div>
         </div>
       )}
+
+      {/* Publications Section */}
+      <div className='divide-y divide-gray-200 dark:divide-gray-700'>
+        <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
+          <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
+            Publications
+          </h2>
+          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
+            Authored technical guides for full-stack engineering and
+            recommendation systems.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 gap-8 py-8 md:grid-cols-2'>
+          <div className='flex gap-4 rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='text-4xl'>📚</div>
+            <div>
+              <h3 className='text-xl font-bold dark:text-white'>
+                Build Your Own Netflix
+              </h3>
+              <p className='mb-4 text-gray-500 dark:text-gray-400'>
+                A Full Stack Guide to Movie Recommendation Systems (Amazon).
+              </p>
+              <a
+                href='https://a.co/d/crhmMBu'
+                target='_blank'
+                rel='noreferrer'
+                className='text-primary-500'
+              >
+                View on Amazon &rarr;
+              </a>
+            </div>
+          </div>
+          <div className='flex gap-4 rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='text-4xl'>📖</div>
+            <div>
+              <h3 className='text-xl font-bold dark:text-white'>
+                나 혼자 만든다! 풀스택
+              </h3>
+              <p className='mb-4 text-gray-500 dark:text-gray-400'>
+                Published by BJ Public, covering end-to-end web services.
+              </p>
+              <a
+                href='http://www.yes24.com/Product/Goods/116009699'
+                target='_blank'
+                rel='noreferrer'
+                className='text-primary-500'
+              >
+                View on BJ Public &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,0 +1,51 @@
+---
+title: 'The SAP HANA to Snowflake Transformation: A Value Engineering Perspective'
+date: '2025-11-15'
+tags: ['snowflake', 'sap-hana', 'data-migration', 'value-engineering']
+draft: false
+summary: 'How migrating from legacy SAP architectures to a modern data stack unblocks enterprise AI and drives measurable business ROI.'
+authors: ['default']
+---
+
+In my time leading the data transformation at Airpremia, I encountered a challenge common to many established enterprises: the "Legacy Data Trap." The organization was running on SAP HANA, a powerful but often siloed environment where business logic was buried deep within ERP modules, making agile data science and AI initiatives nearly impossible.
+
+This wasn't just a technical debt problem; it was a **value leakage** problem.
+
+## The Problem: The High Cost of "Business as Usual"
+
+When I joined Airpremia, the data team was spending 70% of their time on "data plumbing"—manual extractions, fixing broken pipelines, and reconciling reports that didn't match. 
+
+The SAP HANA environment, while robust for transactional workloads, created several bottlenecks:
+1. **Siloed Logic**: Critical business rules were locked inside SAP-specific views, inaccessible to modern analytics tools.
+2. **High TCO**: The infrastructure costs for scaling HANA were prohibitive for large-scale ML workloads.
+3. **Low Velocity**: It took weeks to answer simple cross-departmental questions (e.g., "How does aircraft maintenance schedule impact customer NPS?").
+
+## The Strategy: Architecting for Value
+
+We didn't just want to "move" data; we wanted to **transform the value journey.** The migration to Snowflake was designed as the foundation for an enterprise-wide "Single Source of Truth."
+
+### 1. SAP ERP Extraction Strategy
+We built custom extraction pipelines that didn't just dump tables, but mapped complex SAP ERP modules into clean, business-friendly dimensions. By using a modern stack (Snowflake + dbt + Rudderstack), we moved from batch-heavy processing to a near real-time flow.
+
+### 2. Establishing the "Value Infrastructure"
+By centralizing data from SAP ERP, flight operations, and customer touchpoints (Braze, Statsig) into Snowflake, we created a unified data mesh. This allowed us to:
+- **Reduce dbt model run times by 93%**.
+- **Automate KPI monitoring**, moving from weekly manual reports to real-time Slack alerts.
+
+## The Business Impact: Beyond Efficiency
+
+The migration wasn't an end in itself; it was the enabler for high-impact AI. Once the foundation was solid, we were able to:
+- **Optimize Revenue**: Real-time visibility into booking trends allowed for more dynamic pricing strategies.
+- **Improve Customer Loyalty**: By integrating Braze with Snowflake, we personalized marketing campaigns based on actual flight behavior, not just demographic data.
+
+## Lessons for Value Engineering Leaders
+
+If you are considering a similar migration, remember these three pillars:
+
+1. **Don't Lift and Shift**: Use the migration to refactor your data models. Legacy logic in SAP is often outdated; don't bring it into your new modern data stack.
+2. **Focus on Stakeholder ROI**: At every step, show how the new architecture solves a specific business pain point. For us, it was reducing ad-hoc query requests by 40% for analysts.
+3. **Data Culture is the Glue**: Technology alone won't fix a siloed organization. We published bi-weekly "Data Magazines" to evangelize the new capabilities and ensure every department knew how to leverage the new platform.
+
+The move from SAP HANA to Snowflake is more than a database change—it's a strategic shift from being "data-heavy" to being "data-driven." 
+
+If your organization is struggling with legacy SAP bottlenecks, I'd love to share the specific frameworks we used to navigate this transformation.
