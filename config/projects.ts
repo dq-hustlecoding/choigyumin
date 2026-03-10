@@ -38,7 +38,7 @@ export const projects: Project[] = [
     banner: '/static/projects/snowflake/logo.png',
     website: 'https://snowflake.com',
     description:
-      'Challenge: GS Engineering & Construction needed to modernize their ML infrastructure and centralize data for $250K deal closure. \nSolution: Orchestrated a large-scale migration from MLflow to Snowflake and designed a multi-cloud data architecture. \nValue: Successfully closed the $250K enterprise deal and reduced data silos, enabling AI-driven construction management.',
+      '**Challenge**: GS Engineering & Construction needed to modernize their ML infrastructure and centralize data for $250K deal closure.\n\n**Solution**: Orchestrated a large-scale migration from MLflow to Snowflake and designed a multi-cloud data architecture.\n\n**Value**: Successfully closed the $250K enterprise deal and reduced data silos, enabling AI-driven construction management.',
     shortDescription: '$250K GS E&C Deal & ML Modernization',
     repository: null,
     stack: [
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     banner: '/static/projects/singapore-startup/logo.png',
     website: '#',
     description:
-      'Challenge: Scalability and cold-start issues in recommendation engines were hindering user growth and Series A valuation. \nSolution: Led a team of 7 as CTO to build high-performance recommendation engines using Deep Learning (LightGCN) and ALS. \nValue: Secured $20M Series A funding and improved recommendation accuracy by 35%.',
+      '**Challenge**: Scalability and cold-start issues in recommendation engines were hindering user growth and Series A valuation.\n\n**Solution**: Led a team of 7 as CTO to build high-performance recommendation engines using Deep Learning (LightGCN) and ALS.\n\n**Value**: Secured $20M Series A funding and improved recommendation accuracy by 35%.',
     shortDescription: 'CTO Leadership & $20M Series A',
     repository: null,
     stack: [
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     banner: '/static/projects/greybox/logo.png',
     website: '#',
     description:
-      'Challenge: Needed to expand the enterprise customer base by proving tangible product value. \nSolution: Developed custom A/B testing modules and data-driven product strategies. \nValue: Expanded enterprise customer base by 40% and improved conversion rates significantly.',
+      '**Challenge**: Needed to expand the enterprise customer base by proving tangible product value.\n\n**Solution**: Developed custom A/B testing modules and data-driven product strategies.\n\n**Value**: Expanded enterprise customer base by 40% and improved conversion rates significantly.',
     shortDescription: '40% Enterprise Customer Growth',
     repository: null,
     stack: [
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     banner: '/static/projects/momenti/momenti.png',
     website: 'https://momenti.tv',
     description:
-      'Challenge: Bridging the gap between static media and interactive AI experiences. \nSolution: Introduced GenAI pipelines (Text-to-Interactive Video) and built robust data cultures from scratch in New York. \nValue: Pioneered interactive media technology and automated content pipelines, reducing production costs by 30%.',
+      '**Challenge**: Bridging the gap between static media and interactive AI experiences.\n\n**Solution**: Introduced GenAI pipelines (Text-to-Interactive Video) and built robust data cultures from scratch in New York.\n\n**Value**: Pioneered interactive media technology and automated content pipelines, reducing production costs by 30%.',
     shortDescription: 'GenAI & Data Culture Leadership',
     repository: null,
     stack: [

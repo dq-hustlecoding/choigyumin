@@ -82,7 +82,7 @@ export default function Project({
         <Conditional condition={!!deployment}>
           <DeploymentList deployment={deployment} />
         </Conditional>
-        <p className='mt-2 mb-4 font-light'>{description}</p>
+        <p className='whitespace-pre-wrap mt-2 mb-4 font-light text-gray-500 dark:text-gray-400'>{description}</p>
       </>
     ),
     [],
@@ -102,7 +102,7 @@ export default function Project({
       <H1 className='lg:text-5x mb-4 text-3xl font-bold dark:text-white'>
         {title}
       </H1>
-      <p className='mb-4 font-light'>{description}</p>
+      <p className='whitespace-pre-wrap mb-4 font-light text-gray-500 dark:text-gray-400'>{description}</p>
 
       <H2>Stack</H2>
       <StackList stack={stack} />
