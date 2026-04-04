@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'Gyumin Choi',
   headerTitle: 'Gyumin Choi',
   description:
-    'Enterprise Value Engineering Leader & Technical Strategist. Ex-CTO, 2x Author, specializing in Snowflake, SAP HANA, and GenAI.',
+    'Applied AI Engineer & Technical Advisor. Ex-CTO, 2x Author, specializing in LLM deployment, agent development, and production AI systems.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://choigyumin.pages.dev',

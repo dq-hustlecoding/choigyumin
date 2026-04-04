@@ -53,34 +53,22 @@ export default function Home({
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
           <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-            Business Impact & Key Achievements
+            Impact Highlights
           </h2>
           <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            Measurable value created through technical leadership and strategic
-            engineering.
+            Measurable outcomes from production AI engineering and technical leadership.
           </p>
         </div>
         <div className='grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-4'>
           <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
             <div className='mb-2 text-3xl font-bold text-primary-500'>
-              $250K
+              40%
             </div>
             <h3 className='mb-2 text-lg font-bold dark:text-white'>
-              GS E&C Deal
+              LLM Automation
             </h3>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              Closed enterprise deal by migrating MLflow to Snowflake and
-              designing multi-cloud architecture.
-            </p>
-          </div>
-          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
-            <div className='mb-2 text-3xl font-bold text-primary-500'>40%</div>
-            <h3 className='mb-2 text-lg font-bold dark:text-white'>
-              Efficiency Gain
-            </h3>
-            <p className='text-sm text-gray-500 dark:text-gray-400'>
-              Reduced demo prep time by 40% and improved team productivity by
-              30% through GenAI automation.
+              Reduced operational overhead through Claude-powered workflow automation and AI-assisted documentation.
             </p>
           </div>
           <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
@@ -89,60 +77,62 @@ export default function Home({
               Customer Growth
             </h3>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              Scaled enterprise customer base at Greybox through custom A/B
-              testing and data strategy.
+              Scaled enterprise customer base at Greybox through technical advisory and custom evaluation frameworks.
+            </p>
+          </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <div className='mb-2 text-3xl font-bold text-primary-500'>50M+</div>
+            <h3 className='mb-2 text-lg font-bold dark:text-white'>
+              Rows / Day
+            </h3>
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Engineered distributed data processing on Spark/Kubernetes at Class101, handling 50M+ daily transactions.
             </p>
           </div>
           <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
             <div className='mb-2 text-3xl font-bold text-primary-500'>$20M</div>
             <h3 className='mb-2 text-lg font-bold dark:text-white'>Series A</h3>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              Led technical strategy as CTO for a Singapore startup, securing $20M in funding by building high-performance recommendation engines (LightGCN, ALS).
+              Led technical strategy as CTO, securing $20M in funding by building high-performance recommendation engines (LightGCN, ALS).
             </p>
           </div>
         </div>
       </div>
 
-      {/* Core Competencies Section */}
+      {/* Technical Expertise Section */}
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
           <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-            Core Competencies & Value Drivers
+            Technical Expertise
           </h2>
           <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            Bridging the gap between technical complexity and business ROI.
+            From LLM deployment to data architecture — the full applied AI stack.
           </p>
         </div>
         <div className='grid grid-cols-1 gap-6 py-8 md:grid-cols-3'>
           <div className='space-y-3'>
             <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-              Value Engineering
+              Applied AI & LLMs
             </h3>
-            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
-              <li>ROI & TCO Analysis</li>
-              <li>GTM Technical Strategy</li>
-              <li>Enterprise Solution Design</li>
-            </ul>
+            <p className='text-gray-500 dark:text-gray-400'>
+              Prompt engineering, agent development, RAG pipelines, LLM evaluation frameworks, and Claude API integration in production environments.
+            </p>
           </div>
           <div className='space-y-3'>
             <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-              Data & AI Architecture
+              Data & Infrastructure
             </h3>
-            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
-              <li>Snowflake & SAP HANA</li>
-              <li>GenAI Pipeline Automation</li>
-              <li>Multi-cloud Data Mesh</li>
-            </ul>
+            <p className='text-gray-500 dark:text-gray-400'>
+              End-to-end data pipelines (dbt, Spark, Kinesis), multi-cloud architecture (GCP, AWS), and scalable infrastructure on Kubernetes.
+            </p>
           </div>
           <div className='space-y-3'>
             <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
               Technical Leadership
             </h3>
-            <ul className='list-disc pl-5 text-gray-500 dark:text-gray-400'>
-              <li>Ex-CTO Experience</li>
-              <li>High-Impact Team Building</li>
-              <li>Strategic Roadmapping</li>
-            </ul>
+            <p className='text-gray-500 dark:text-gray-400'>
+              Ex-CTO experience, enterprise technical advisory, developer workshops, and cross-functional stakeholder alignment. Bilingual in Korean and English.
+            </p>
           </div>
         </div>
       </div>
@@ -151,10 +141,10 @@ export default function Home({
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
         <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
           <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-            Latest Insights
+            Latest Writing
           </h2>
           <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            Thoughts on data strategy, AI transformation, and value engineering.
+            Thoughts on AI engineering, data architecture, and building with LLMs.
           </p>
         </div>
         <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
@@ -205,7 +195,7 @@ export default function Home({
             className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
             aria-label='all posts'
           >
-            All Insights &rarr;
+            All Posts &rarr;
           </Link>
         </div>
       )}
@@ -215,10 +205,10 @@ export default function Home({
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
           <div className='space-y-2 pt-10 pb-8 md:space-y-5'>
             <h2 className='text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl'>
-              Strategic Projects
+              Selected Projects
             </h2>
             <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-              Technical solutions that drove significant business outcomes.
+              Production AI systems and technical work that drove real outcomes.
             </p>
           </div>
           <div className='container py-6'>
@@ -240,7 +230,7 @@ export default function Home({
                           className='text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
                           aria-label={`Read more about ${title}`}
                         >
-                          Impact Case Study &rarr;
+                          Read more &rarr;
                         </Link>
                       </div>
                     </div>
@@ -258,48 +248,41 @@ export default function Home({
             Publications
           </h2>
           <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            Authored technical guides for full-stack engineering and
-            recommendation systems.
+            Technical guides on full-stack engineering and recommendation systems.
           </p>
         </div>
         <div className='grid grid-cols-1 gap-8 py-8 md:grid-cols-2'>
-          <div className='flex gap-4 rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
-            <div className='text-4xl'>📚</div>
-            <div>
-              <h3 className='text-xl font-bold dark:text-white'>
-                Build Your Own Netflix
-              </h3>
-              <p className='mb-4 text-gray-500 dark:text-gray-400'>
-                A Full Stack Guide to Movie Recommendation Systems (Amazon).
-              </p>
-              <a
-                href='https://a.co/d/crhmMBu'
-                target='_blank'
-                rel='noreferrer'
-                className='text-primary-500'
-              >
-                View on Amazon &rarr;
-              </a>
-            </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <h3 className='mb-2 text-xl font-bold dark:text-white'>
+              Build Your Own Netflix
+            </h3>
+            <p className='mb-4 text-sm text-gray-500 dark:text-gray-400'>
+              A full-stack guide to movie recommendation systems, published on Amazon.
+            </p>
+            <a
+              href='https://a.co/d/crhmMBu'
+              target='_blank'
+              rel='noreferrer'
+              className='text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+            >
+              View on Amazon &rarr;
+            </a>
           </div>
-          <div className='flex gap-4 rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
-            <div className='text-4xl'>📖</div>
-            <div>
-              <h3 className='text-xl font-bold dark:text-white'>
-                나 혼자 만든다! 풀스택
-              </h3>
-              <p className='mb-4 text-gray-500 dark:text-gray-400'>
-                Published by BJ Public, covering end-to-end web services.
-              </p>
-              <a
-                href='http://www.yes24.com/Product/Goods/116009699'
-                target='_blank'
-                rel='noreferrer'
-                className='text-primary-500'
-              >
-                View on BJ Public &rarr;
-              </a>
-            </div>
+          <div className='rounded-xl border border-gray-200 p-6 dark:border-gray-700'>
+            <h3 className='mb-2 text-xl font-bold dark:text-white'>
+              나 혼자 만든다! 풀스택
+            </h3>
+            <p className='mb-4 text-sm text-gray-500 dark:text-gray-400'>
+              Published by BJ Public, covering end-to-end web service development with a recommendation system.
+            </p>
+            <a
+              href='http://www.yes24.com/Product/Goods/116009699'
+              target='_blank'
+              rel='noreferrer'
+              className='text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+            >
+              View on BJ Public &rarr;
+            </a>
           </div>
         </div>
       </div>

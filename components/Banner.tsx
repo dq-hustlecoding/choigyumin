@@ -29,22 +29,21 @@ function Banner(props: BannerProps): React.ReactElement {
       {/* Description */}
       <p className='mb-6 max-w-2xl text-base leading-relaxed text-gray-500 dark:text-gray-400 lg:text-lg'>
         <span className='font-semibold text-gray-900 dark:text-white'>
-          Enterprise Value Engineering Leader &amp; Technical Strategist
+          Applied AI Engineer with 10+ years of experience
         </span>{' '}
-        with 10+ years of experience. Specializing in{' '}
+        building and deploying production LLM systems. Specializing in{' '}
         <span className='font-medium text-gray-700 dark:text-gray-200'>
-          Snowflake
+          prompt engineering
         </span>
         ,{' '}
         <span className='font-medium text-gray-700 dark:text-gray-200'>
-          SAP HANA
+          agent development
         </span>
         , and{' '}
         <span className='font-medium text-gray-700 dark:text-gray-200'>
-          GenAI
+          AI technical advisory
         </span>
-        . Ex-CTO and 2x technical author focused on creating business value
-        through data architecture.
+        . Ex-CTO and 2x technical author. Bilingual in Korean and English.
       </p>
 
       {/* CTA Buttons */}
@@ -53,14 +52,14 @@ function Banner(props: BannerProps): React.ReactElement {
           className='inline-flex items-center rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-500'
           href='/about'
         >
-          View Value Journey
+          About Me
         </Link>
 
         <Link
           className='inline-flex items-center rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700'
           href='/contact'
         >
-          Request ROI Analysis
+          Get in Touch
         </Link>
 
         <a
@@ -69,7 +68,7 @@ function Banner(props: BannerProps): React.ReactElement {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Schedule a Strategy Call →
+          Schedule a Chat →
         </a>
       </div>
 

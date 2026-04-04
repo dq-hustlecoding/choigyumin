@@ -16,15 +16,20 @@ export enum Stack {
   node,
   django,
 
+  // AI / LLM
+  claude_api,
+  prompt_engineering,
+  llm_evaluation,
+  rag,
+  gen_ai,
+
   // Cloud & Data
   aws,
   gcp,
   docker,
   kubernetes,
   snowflake,
-  sap_hana,
   data_architecture,
-  gen_ai,
 
   // Messaging
   nats,
@@ -37,17 +42,18 @@ export enum Stack {
 }
 
 export const WorkStack = [
-  Stack.snowflake,
-  Stack.sap_hana,
+  Stack.claude_api,
+  Stack.prompt_engineering,
+  Stack.llm_evaluation,
+  Stack.rag,
   Stack.gen_ai,
-  Stack.data_architecture,
   Stack.python,
   Stack.typescript,
   Stack.react,
+  Stack.gcp,
+  Stack.aws,
   Stack.kubernetes,
   Stack.docker,
-  Stack.aws,
-  Stack.gcp,
   Stack.postgres,
 ];
 
@@ -57,17 +63,29 @@ type StackInfoMap = {
 };
 
 export const StackInfo: Record<Stack, StackInfoMap> = {
-  [Stack.snowflake]: {
-    value: 'Snowflake',
-    color: '#29B5E8',
+  [Stack.claude_api]: {
+    value: 'Claude API',
+    color: '#CC785C',
   },
-  [Stack.sap_hana]: {
-    value: 'SAP HANA',
-    color: '#008FD3',
+  [Stack.prompt_engineering]: {
+    value: 'Prompt Engineering',
+    color: '#D4A96A',
+  },
+  [Stack.llm_evaluation]: {
+    value: 'LLM Evaluation',
+    color: '#6B8CFF',
+  },
+  [Stack.rag]: {
+    value: 'RAG',
+    color: '#58D68D',
   },
   [Stack.gen_ai]: {
     value: 'Generative AI',
     color: '#FF5733',
+  },
+  [Stack.snowflake]: {
+    value: 'Snowflake',
+    color: '#29B5E8',
   },
   [Stack.data_architecture]: {
     value: 'Data Architecture',
