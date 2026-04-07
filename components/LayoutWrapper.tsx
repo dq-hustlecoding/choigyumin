@@ -17,10 +17,10 @@ const LayoutWrapper = ({ children }: Props) => {
         <header className='flex items-center justify-between py-8'>
           <Link
             href='/'
-            className='text-lg font-bold tracking-tight text-gray-900 dark:text-white'
-            aria-label='DQ Gyumin Choi home'
+            className='text-sm font-semibold tracking-tight text-gray-900 dark:text-white'
+            aria-label='Gyumin Choi home'
           >
-            DQ<span className='text-primary-500'>.</span>
+            Gyumin Choi
           </Link>
           <div className='flex items-center text-base leading-5'>
             <div className='hidden sm:block'>
