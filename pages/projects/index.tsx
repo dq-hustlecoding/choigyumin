@@ -15,11 +15,11 @@ export default function Projects() {
         <Header title='Projects' />
         <div className='container py-12'>
           <div className='-m-4 flex flex-wrap'>
-            {config.projects.map(({ slug, title, description, banner }) => (
+            {config.projects.map(({ slug, title, description, shortDescription, banner }) => (
               <Card
                 key={slug}
                 title={title}
-                description={description}
+                description={shortDescription || description}
                 banner={banner}
                 href={`/projects/${slug}`}
               />

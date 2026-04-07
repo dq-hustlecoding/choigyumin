@@ -14,14 +14,21 @@ const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
       <div className='flex h-screen flex-col justify-between'>
-        <header className='flex items-center justify-end py-8'>
+        <header className='flex items-center justify-between py-8'>
+          <Link
+            href='/'
+            className='text-lg font-bold tracking-tight text-gray-900 dark:text-white'
+            aria-label='DQ Gyumin Choi home'
+          >
+            DQ<span className='text-primary-500'>.</span>
+          </Link>
           <div className='flex items-center text-base leading-5'>
             <div className='hidden sm:block'>
               {headerNavLinks.map(link => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4'
+                  className='p-1 font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 sm:p-4'
                 >
                   {link.title}
                 </Link>

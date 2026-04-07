@@ -102,7 +102,21 @@ export default function Project({
       <H1 className='lg:text-5x mb-4 text-3xl font-bold dark:text-white'>
         {title}
       </H1>
-      <p className='whitespace-pre-wrap mb-4 font-light text-gray-500 dark:text-gray-400'>{description}</p>
+      <div className='mb-4 space-y-3 font-light text-gray-500 dark:text-gray-400'>
+        {description.split('\n\n').map((para, i) => (
+          <p key={i} className='leading-relaxed'>
+            {para.split(/(\*\*[^*]+\*\*)/).map((chunk, j) =>
+              chunk.startsWith('**') && chunk.endsWith('**') ? (
+                <strong key={j} className='font-semibold text-gray-700 dark:text-gray-300'>
+                  {chunk.slice(2, -2)}
+                </strong>
+              ) : (
+                chunk
+              )
+            )}
+          </p>
+        ))}
+      </div>
 
       <H2>Stack</H2>
       <StackList stack={stack} />

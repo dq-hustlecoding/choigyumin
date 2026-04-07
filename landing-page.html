@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI·바이브코딩으로 완성하는 인터랙티브 개발자 포트폴리오 & 실전 취업 전략</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e1b4b;
+            --gray: #6b7280;
+            --light: #f8fafc;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --gradient-warm: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge i {
+            color: var(--accent);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-warm);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+
+        .stat-card .label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-warm);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pain-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #ef4444;
+            transition: transform 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pain-card i {
+            font-size: 2.5rem;
+            color: #ef4444;
+            margin-bottom: 1rem;
+        }
+
+        .pain-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .pain-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 6rem 2rem;
+            background: #fff;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            padding: 2.5rem;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution-icon i {
+            font-size: 1.75rem;
+            color: #fff;
+        }
+
+        .solution-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .solution-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .solution-card ul {
+            list-style: none;
+        }
+
+        .solution-card ul li {
+            padding: 0.5rem 0;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .solution-card ul li i {
+            color: var(--secondary);
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            color: #fff;
+        }
+
+        .results-section .section-title h2 {
+            color: #fff;
+        }
+
+        .results-section .section-title p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .result-card .icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .result-card .icon i {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .result-card h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-warm);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .result-card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .testimonial p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .testimonial .author {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Curriculum Section */
+        .curriculum-section {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+
+        .curriculum-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .curriculum-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .curriculum-timeline::before {
+                left: 20px;
+            }
+        }
+
+        .chapter {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .chapter:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .chapter:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .chapter,
+            .chapter:nth-child(odd),
+            .chapter:nth-child(even) {
+                flex-direction: row;
+                padding-left: 50px;
+            }
+        }
+
+        .chapter-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.2rem;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .chapter-number {
+                left: 20px;
+            }
+        }
+
+        .chapter-content {
+            width: calc(50% - 50px);
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 768px) {
+            .chapter-content {
+                width: 100%;
+            }
+        }
+
+        .chapter-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chapter-content h3 i {
+            color: var(--accent);
+        }
+
+        .lesson-list {
+            list-style: none;
+        }
+
+        .lesson-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .lesson-list li:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-list li i {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        /* Infographic Section */
+        .infographic-section {
+            padding: 6rem 2rem;
+            background: #fff;
+        }
+
+        .infographic-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .info-card .step {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .info-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            padding-right: 50px;
+        }
+
+        .info-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            color: var(--primary-dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .bonus-section .section-title h2 {
+            color: #92400e;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bonus-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .bonus-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .bonus-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .bonus-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .price-card .original-price {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: line-through;
+        }
+
+        .price-card .current-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--gradient-warm);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-card .discount {
+            display: inline-block;
+            background: var(--gradient-warm);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1.5rem;
+        }
+
+        .guarantee i {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f0a1e;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stat-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="badge"><i class="ri-fire-fill"></i> AI 취업 트렌드</span>
+                <span class="badge"><i class="ri-star-fill"></i> 플랫폼 내 유일</span>
+                <span class="badge"><i class="ri-money-dollar-circle-fill"></i> 고수익 커리어</span>
+            </div>
+            
+            <h1>
+                AI·바이브코딩으로 완성하는<br>
+                <span>인터랙티브 개발자 포트폴리오</span><br>
+                & 실전 취업 전략
+            </h1>
+            
+            <p class="hero-subtitle">
+                코딩 몰라도 30분 만에 AI 앱 제작, 클릭 한 번으로 면접관을 사로잡는<br>
+                구글독스 인터랙티브 이력서의 비밀을 공개합니다
+            </p>
+            
+            <div class="stat-cards">
+                <div class="stat-card float">
+                    <span class="number">50%</span>
+                    <span class="label">연봉 인상 달성</span>
+                </div>
+                <div class="stat-card float" style="animation-delay: 0.2s">
+                    <span class="number">7배</span>
+                    <span class="label">클릭률 상승</span>
+                </div>
+                <div class="stat-card float" style="animation-delay: 0.4s">
+                    <span class="number">30분</span>
+                    <span class="label">AI 앱 완성</span>
+                </div>
+                <div class="stat-card float" style="animation-delay: 0.6s">
+                    <span class="number">100%</span>
+                    <span class="label">실제 사례 공개</span>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#curriculum" class="btn btn-primary">
+                    <i class="ri-play-circle-fill"></i> 지금 바로 시작하기
+                </a>
+                <a href="#results" class="btn btn-secondary">
+                    <i class="ri-eye-line"></i> 합격 사례 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>이런 고민, 혹시 당신도?</h2>
+                <p>수많은 개발자들이 같은 문제로 취업에 어려움을 겪고 있습니다</p>
+            </div>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <i class="ri-file-damage-line"></i>
+                    <h3>PDF 이력서의 한계</h3>
+                    <p>링크를 넣어도 리크루터는 클릭하지 않습니다. 정적인 이력서로는 당신의 실력을 제대로 보여줄 수 없어요.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="ri-time-line"></i>
+                    <h3>포트폴리오 제작 시간</h3>
+                    <p>몇 주를 투자해도 만족스럽지 않은 포트폴리오. 시간은 없고 결과물은 아쉽기만 합니다.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="ri-question-line"></i>
+                    <h3>면접관이 원하는 것</h3>
+                    <p>도대체 면접관은 무엇을 보는 걸까요? 30초 안에 탈락하는 90%의 포트폴리오가 됩니다.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="ri-robot-line"></i>
+                    <h3>AI 시대 차별화</h3>
+                    <p>모두가 비슷한 이력서를 제출합니다. AI 시대에 맞는 새로운 전략이 필요합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>이 강의가 해결해 드립니다</h2>
+                <p>실제 합격자의 전략을 그대로 배워가세요</p>
+            </div>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="ri-link"></i>
+                    </div>
+                    <h3>인터랙티브 이력서</h3>
+                    <p>구글독스 + 슬라이드 연동으로 클릭 가능한 이력서를 만듭니다</p>
+                    <ul>
+                        <li><i class="ri-check-line"></i> 프로젝트 클릭 시 시각화 자료 이동</li>
+                        <li><i class="ri-check-line"></i> 링크 클릭률 7배 상승 전략</li>
+                        <li><i class="ri-check-line"></i> 실제 리크루터 반응 공개</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="ri-magic-line"></i>
+                    </div>
+                    <h3>AI 바이브코딩</h3>
+                    <p>코딩 몰라도 Claude로 30분 만에 앱을 만들 수 있습니다</p>
+                    <ul>
+                        <li><i class="ri-check-line"></i> 영어 면접 연습 웹앱 제작</li>
+                        <li><i class="ri-check-line"></i> 이력서 자동 분석 AI 툴</li>
+                        <li><i class="ri-check-line"></i> GitHub Pages 무료 호스팅</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+                    <h3>면접관 인사이트</h3>
+                    <p>실제 면접관 경험을 바탕으로 합격 비밀을 공개합니다</p>
+                    <ul>
+                        <li><i class="ri-check-line"></i> 면접관 체크리스트 공개</li>
+                        <li><i class="ri-check-line"></i> 미리캔버스 연봉 50% 인상 사례</li>
+                        <li><i class="ri-check-line"></i> 업스테이지 AI 스타트업 합격기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>실제 성과가 증명합니다</h2>
+                <p>이 전략으로 달성한 실제 결과들</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="icon">
+                        <i class="ri-money-dollar-circle-line"></i>
+                    </div>
+                    <h3>50% ↑</h3>
+                    <p>미리캔버스 이직 시<br>연봉 인상률</p>
+                </div>
+                <div class="result-card">
+                    <div class="icon">
+                        <i class="ri-cursor-line"></i>
+                    </div>
+                    <h3>7배</h3>
+                    <p>링크 텍스트 최적화 후<br>클릭률 상승</p>
+                </div>
+                <div class="result-card">
+                    <div class="icon">
+                        <i class="ri-file-check-line"></i>
+                    </div>
+                    <h3>2배</h3>
+                    <p>AI 이력서 분석 후<br>서류 통과율</p>
+                </div>
+                <div class="result-card">
+                    <div class="icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+                    <h3>3곳+</h3>
+                    <p>커뮤니티 피드백 후<br>추가 합격</p>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"이 인터랙티브 이력서로 업스테이지, 미리캔버스에 합격했습니다. 면접관들이 '이런 이력서는 처음 본다'고 했어요. 특히 프로젝트 클릭하면 바로 시각화 자료가 보이는 게 결정적이었습니다."</p>
+                <span class="author">- 강사 본인 실제 경험담</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infographic Section -->
+    <section class="infographic-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>4단계로 완성하는 합격 로드맵</h2>
+                <p>체계적인 커리큘럼으로 취업 성공까지 안내합니다</p>
+            </div>
+            
+            <div class="infographic-wrapper">
+                <div class="info-card">
+                    <span class="step">1</span>
+                    <h4>인터랙티브 포트폴리오 전략</h4>
+                    <p>구글독스와 슬라이드를 연동해 클릭 가능한 이력서를 제작합니다</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">구글독스 연동</span>
+                        <span class="feature-tag">클릭률 최적화</span>
+                        <span class="feature-tag">템플릿 제공</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="step">2</span>
+                    <h4>AI 바이브코딩 실습</h4>
+                    <p>코딩 없이 Claude로 포트폴리오용 앱을 직접 만들어봅니다</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">Claude 활용</span>
+                        <span class="feature-tag">30분 앱 제작</span>
+                        <span class="feature-tag">GitHub Pages</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="step">3</span>
+                    <h4>면접관 합격 비밀</h4>
+                    <p>실제 면접관이 공개하는 포트폴리오 평가 기준과 합격 사례</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">면접관 시점</span>
+                        <span class="feature-tag">실제 합격 사례</span>
+                        <span class="feature-tag">연봉 협상</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="step">4</span>
+                    <h4>지속 성장 전략</h4>
+                    <p>제출 전 체크리스트와 6개월 주기 업데이트 전략까지</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">20가지 체크리스트</span>
+                        <span class="feature-tag">커뮤니티 활용</span>
+                        <span class="feature-tag">피드백 루프</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum-section" id="curriculum">
+        <div class="container">
+            <div class="section-title">
+                <h2>상세 커리큘럼</h2>
+                <p>7개 챕터, 21개 강의로 구성된 체계적인 학습</p>
+            </div>
+            
+            <div class="curriculum-timeline">
+                <div class="chapter">
+                    <span class="chapter-number">1</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-compass-3-line"></i> 개발자 취업 트렌드 탐색</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 2024년 개발자 취업시장 트렌드 분석</li>
+                            <li><i class="ri-play-circle-line"></i> AI, 바이브코딩, 구글 오피스 활용의 필요성</li>
+                            <li><i class="ri-play-circle-line"></i> 차별화된 포트폴리오가 취업을 바꾸는 이유</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">2</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-file-text-line"></i> 구글독스 이력서 & 커버레터</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 구글독스 기본 구조 및 템플릿 이해</li>
+                            <li><i class="ri-play-circle-line"></i> 면접관이 주목하는 이력서 항목 선정법</li>
+                            <li><i class="ri-play-circle-line"></i> AI 활용 맞춤형 이력서 문구 자동화</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">3</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-slideshow-3-line"></i> 인터랙티브 포트폴리오 제작</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 구글슬라이드 핵심 활용법 익히기</li>
+                            <li><i class="ri-play-circle-line"></i> 코드/애니메이션 연동 인터랙티브 페이지</li>
+                            <li><i class="ri-play-circle-line"></i> 깃허브·노션 등 외부 콘텐츠 연동하기</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">4</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-code-s-slash-line"></i> 바이브코딩 실습</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 바이브코딩 소개와 실시간 코딩 피드백</li>
+                            <li><i class="ri-play-circle-line"></i> 코딩 테스트 & 프로젝트 기록 자동화</li>
+                            <li><i class="ri-play-circle-line"></i> 대외활동/사이드 프로젝트 AI 평가</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">5</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-lightbulb-line"></i> AI 맞춤 취업전략</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 직무/기업 분석과 포트폴리오 커스텀</li>
+                            <li><i class="ri-play-circle-line"></i> ChatGPT·구글AI로 자소서/기술질문 첨삭</li>
+                            <li><i class="ri-play-circle-line"></i> AI 기반 경력 한줄/성과 요약 실습</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">6</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-global-line"></i> 퍼블리싱 & 면접 대비</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 구글 드라이브·슬라이드 온라인 공유법</li>
+                            <li><i class="ri-play-circle-line"></i> 지원회사별 맞춤 포트폴리오 전송 전략</li>
+                            <li><i class="ri-play-circle-line"></i> 인터랙티브 포트폴리오로 실전 면접 준비</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chapter">
+                    <span class="chapter-number">7</span>
+                    <div class="chapter-content">
+                        <h3><i class="ri-trophy-line"></i> 실전 취업 & AI 코칭</h3>
+                        <ul class="lesson-list">
+                            <li><i class="ri-play-circle-line"></i> 실제 합격 포트폴리오/이력서 사례 분석</li>
+                            <li><i class="ri-play-circle-line"></i> AI 기반 피드백 루틴으로 성장 지속</li>
+                            <li><i class="ri-play-circle-line"></i> 커리어 성장 로드맵 그리기</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>수강생 전용 특별 혜택</h2>
+            </div>
+            
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <i class="ri-file-copy-2-line"></i>
+                    <h3>이력서 템플릿</h3>
+                    <p>실제 합격한 구글독스 이력서 템플릿 제공</p>
+                </div>
+                <div class="bonus-card">
+                    <i class="ri-slideshow-line"></i>
+                    <h3>10장 포트폴리오 템플릿</h3>
+                    <p>구글슬라이드 포트폴리오 템플릿 제공</p>
+                </div>
+                <div class="bonus-card">
+                    <i class="ri-check-double-line"></i>
+                    <h3>20가지 체크리스트</h3>
+                    <p>제출 전 필수 확인 체크리스트 PDF</p>
+                </div>
+                <div class="bonus-card">
+                    <i class="ri-github-fill"></i>
+                    <h3>AI 앱 소스코드</h3>
+                    <p>강의에서 만든 앱 GitHub 코드 제공</p>
+                </div>
+                <div class="bonus-card">
+                    <i class="ri-team-line"></i>
+                    <h3>수강생 커뮤니티</h3>
+                    <p>피드백 & 네트워킹 전용 커뮤니티</p>
+                </div>
+                <div class="bonus-card">
+                    <i class="ri-robot-2-line"></i>
+                    <h3>프롬프트 템플릿</h3>
+                    <p>바이브코딩용 프롬프트 모음집</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>지금 시작하면<br>다음 면접이 달라집니다</h2>
+            <p>실제 합격자의 전략을 그대로 배워 당신의 커리어를 업그레이드하세요</p>
+            
+            <div class="price-card">
+                <div class="original-price">₩199,000</div>
+                <div class="current-price">₩99,000</div>
+                <div class="discount">50% 할인 중</div>
+            </div>
+            
+            <a href="#" class="btn btn-primary" style="font-size: 1.3rem; padding: 1.25rem 3rem;">
+                <i class="ri-shopping-cart-2-line"></i> 클래스 신청하기
+            </a>
+            
+            <div class="guarantee">
+                <i class="ri-shield-check-line"></i>
+                <span>14일 환불 보장 | 평생 무제한 수강</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 AI·바이브코딩 포트폴리오 클래스. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.pain-card, .solution-card, .result-card, .info-card, .bonus-card, .chapter-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

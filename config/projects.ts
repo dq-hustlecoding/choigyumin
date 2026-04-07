@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: 'LLM Automation Pipeline',
     slug: 'llm-automation',
-    banner: '/static/projects/llm-automation/logo.png',
+    banner: '/static/projects/llm-automation/banner.svg',
     website: '#',
     description:
       '**Challenge**: Manual operational workflows and documentation processes were creating significant overhead for a fast-moving team.\n\n**Solution**: Designed and implemented Claude-powered automation workflows — including AI-assisted reporting, documentation generation, and process orchestration — integrated directly into the team\'s existing tools.\n\n**Impact**: Reduced operational overhead by 40% and improved team productivity by 30%, establishing a replicable playbook for LLM-powered internal tooling.',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
   {
     title: 'Greybox — Technical Advisory',
     slug: 'greybox',
-    banner: '/static/projects/greybox/logo.png',
+    banner: '/static/projects/greybox/banner.svg',
     website: '#',
     description:
       '**Challenge**: Enterprise customers needed a trusted technical advisor to unlock the full value of a customer engagement platform.\n\n**Solution**: Served as primary technical advisor, built a custom A/B testing module for enterprise customers, and led developer workshops promoting LLM-powered engagement best practices.\n\n**Impact**: Expanded enterprise customer base by 40% and established a repeatable technical advisory motion.',
