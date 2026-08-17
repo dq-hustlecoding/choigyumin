@@ -39,39 +39,39 @@ const formatDate = (date: string) => {
 
 const impactItems = [
   {
-    stat: '40%',
-    label: 'LLM Automation',
-    desc: 'Reduced operational overhead through Claude-powered workflow automation and AI-assisted documentation.',
+    stat: '$250K',
+    label: 'Enterprise Win',
+    desc: 'Won a competitive deal against Databricks by shipping an end-to-end MLflow-to-Snowflake migration framework in one week.',
   },
   {
-    stat: '40%',
-    label: 'Customer Growth',
-    desc: 'Scaled enterprise customer base at Greybox through technical advisory and custom evaluation frameworks.',
+    stat: '100+',
+    label: 'dbt Models / 6 Hrs',
+    desc: 'Deployed autonomous coding agents on MCP and custom Python orchestrators to refactor 100+ complex dbt models in a single afternoon.',
   },
   {
-    stat: '50M+',
-    label: 'Rows / Day',
-    desc: 'Engineered distributed data processing on Spark/Kubernetes at Class101, handling 50M+ daily transactions.',
+    stat: '400+',
+    label: 'Executives Enabled',
+    desc: 'Delivered the AI/ML keynote at Snowflake World Tour Seoul — voted the #1 session — plus deep-dive workshops for senior engineering teams.',
   },
   {
     stat: '$20M',
     label: 'Series A',
-    desc: 'Led technical strategy as CTO, securing $20M in funding with high-performance recommendation engines.',
+    desc: 'Led technical strategy as CTO of a Singapore startup, securing $20M with high-performance recommendation engines.',
   },
 ];
 
 const expertiseItems = [
   {
-    title: 'Applied AI & LLMs',
-    desc: 'Prompt engineering, agent development, RAG pipelines, LLM evaluation frameworks, and Claude API integration in production environments.',
+    title: 'Enterprise Deployment & Pre-Sales',
+    desc: 'Primary technical authority for tier-1 accounts — discovery, solution design, demos, POCs, competitive migrations, and production go-live. Comfortable with everyone from platform engineers to CTOs.',
   },
   {
-    title: 'Data & Infrastructure',
-    desc: 'End-to-end data pipelines (dbt, Spark, Kinesis), multi-cloud architecture (GCP, AWS), and scalable infrastructure on Kubernetes.',
+    title: 'Applied AI & Agentic Systems',
+    desc: 'Production LLM agents and orchestrators on Model Context Protocol (MCP), RAG pipelines, evaluation frameworks, and prompt engineering — plus the data platforms (dbt, Spark, Snowflake, GCP, AWS) they run on.',
   },
   {
-    title: 'Technical Leadership',
-    desc: 'Ex-CTO experience, enterprise technical advisory, developer workshops, and cross-functional stakeholder alignment. Bilingual in Korean and English.',
+    title: 'Enablement & Technical Leadership',
+    desc: 'Ex-CTO, 2× published author, and keynote speaker. I build the documentation, workshops, and enablement paths that turn a pilot into thousands of daily engineer users. Bilingual in Korean and English.',
   },
 ];
 
@@ -216,7 +216,7 @@ export default function Home({
           </div>
           <ul className='space-y-0'>
             {config.projects
-              .slice(0, 4)
+              .slice(0, 5)
               .map(({ slug, title, shortDescription }) => (
                 <li key={slug}>
                   <Link
