@@ -33,6 +33,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Snowflake — Enterprise AI Deployment',
+    slug: 'snowflake',
+    banner: '/static/projects/snowflake/logo.png',
+    website: 'https://www.snowflake.com',
+    description:
+      "**Challenge**: Tier-1 Korean conglomerates — retail, financial, and construction — wanted to modernize onto an AI-ready data platform, but every deal came down to whether the technical value could be proven quickly and then actually adopted by their engineering teams.\n\n**Solution**: Acted as the primary technical authority across the full customer lifecycle for accounts including GS Retail, GS E&C, Musinsa Payments, and Hyundai Department Store. Designed and executed hands-on POCs, engineered an end-to-end MLflow-to-Snowflake production migration framework inside a one-week window, and built an enterprise agentic AI framework on Model Context Protocol (MCP) with custom Python orchestrators — deploying autonomous coding agents that refactored 100+ complex dbt models in 6 hours. Followed through with enablement: the featured AI/ML keynote at Snowflake World Tour Seoul and deep-dive notebook and pipeline workshops for senior engineering teams.\n\n**Impact**: Secured a $250K enterprise contract head-to-head against Databricks, validated 5-10x data processing efficiency gains against legacy cloud platforms in POC, and delivered the event's #1 voted session to 400+ technology executives.",
+    shortDescription: 'Agentic AI Deployment & $250K Competitive Win',
+    repository: null,
+    stack: [
+      Stack.snowflake,
+      Stack.data_architecture,
+      Stack.python,
+      Stack.prompt_engineering,
+      Stack.llm_evaluation,
+      Stack.aws,
+    ],
+    dimensions: [360, 640],
+    screenshots: ['/static/projects/snowflake/snowflake.png'],
+    deployment: {
+      web: 'https://www.snowflake.com',
+    },
+    subProjects: [],
+  },
+  {
     title: 'LLM Automation Pipeline',
     slug: 'llm-automation',
     banner: '/static/projects/llm-automation/banner.svg',
