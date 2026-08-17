@@ -10,10 +10,10 @@ function Banner(props: BannerProps): React.ReactElement {
   const { frontMatter } = props;
 
   const expertise = [
-    'Applied AI / LLMs',
+    'Applied AI / LLM Agents',
+    'Enterprise Deployment',
+    'Technical Pre-Sales',
     'Data Architecture',
-    'AI/ML Infrastructure',
-    'Technical Leadership',
   ];
 
   return (
@@ -31,9 +31,9 @@ function Banner(props: BannerProps): React.ReactElement {
       </h1>
 
       <p className='mb-4 max-w-xl text-lg font-light leading-relaxed text-gray-600 dark:text-gray-300 lg:text-xl'>
-        Applied AI Engineer building and deploying production LLM systems.
-        Specializing in prompt engineering, agent development, and AI technical
-        advisory.
+        Applied AI engineer who deploys production LLM and agentic systems
+        inside enterprises — owning the technical path from first demo and
+        pilot through rollout, enablement, and adoption.
       </p>
 
       <p className='mb-10 max-w-2xl text-sm leading-relaxed text-gray-400 dark:text-gray-500'>
