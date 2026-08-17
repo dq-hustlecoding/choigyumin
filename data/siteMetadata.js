@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'Gyumin Choi',
   headerTitle: 'Gyumin Choi',
   description:
-    'Applied AI Engineer & Technical Advisor. Ex-CTO, 2x Author, specializing in LLM deployment, agent development, and production AI systems.',
+    'Applied AI & Deployment Engineer. Ex-CTO, 2x Author. I take AI agents from demo to production inside enterprises — pre-sales, pilots, rollout, and engineer enablement.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://choigyumin.pages.dev',
